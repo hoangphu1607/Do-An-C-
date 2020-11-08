@@ -1,0 +1,17 @@
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.exe
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.deps.json
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.runtimeconfig.json
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.runtimeconfig.dev.json
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.dll
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.pdb
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.csprojAssemblyReference.cache
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Form1.resources
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.csproj.GenerateResource.cache
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.AssemblyInfoInputs.cache
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.AssemblyInfo.cs
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.csproj.CoreCompileInputs.cache
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.dll
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.pdb
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.genruntimeconfig.cache
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Properties.Resources.resources
+D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.TuyChon.resources

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\Do an\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj": {}
+    "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj": {}
   },
   "projects": {
-    "D:\\C#\\Do an\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj": {
+    "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\Do an\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj",
+        "projectUniqueName": "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj",
         "projectName": "QuanLyKho",
-        "projectPath": "D:\\C#\\Do an\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\Do an\\Main\\QuanLyKho\\QuanLyKho\\obj\\",
+        "projectPath": "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj",
+        "packagesPath": "C:\\Users\\DUY LONG\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DUY LONG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

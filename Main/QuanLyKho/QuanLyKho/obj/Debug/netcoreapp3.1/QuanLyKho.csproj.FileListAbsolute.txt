@@ -15,3 +15,21 @@ D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.pdb
 D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.genruntimeconfig.cache
 D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Properties.Resources.resources
 D:\C#\Do an\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.TuyChon.resources
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.exe
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.deps.json
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.runtimeconfig.json
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.runtimeconfig.dev.json
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.dll
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\bin\Debug\netcoreapp3.1\QuanLyKho.pdb
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.csprojAssemblyReference.cache
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Form1.resources
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Properties.Resources.resources
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.TuyChon.resources
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.csproj.GenerateResource.cache
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.AssemblyInfoInputs.cache
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.AssemblyInfo.cs
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.csproj.CoreCompileInputs.cache
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.dll
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.pdb
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.genruntimeconfig.cache
+E:\github\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Nhaphang.resources

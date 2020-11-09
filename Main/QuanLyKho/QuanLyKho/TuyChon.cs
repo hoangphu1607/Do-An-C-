@@ -19,5 +19,11 @@ namespace QuanLyKho
         {
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Nhaphang a = new Nhaphang();
+            a.Show();
+        }
     }
 }

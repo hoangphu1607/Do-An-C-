@@ -40,9 +40,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(81, 50);
+            this.button1.Location = new System.Drawing.Point(93, 67);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 123);
+            this.button1.Size = new System.Drawing.Size(159, 164);
             this.button1.TabIndex = 0;
             this.button1.Text = "NHẬP HÀNG";
             this.button1.UseVisualStyleBackColor = true;
@@ -57,64 +58,73 @@
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(336, 74);
+            this.groupBox1.Location = new System.Drawing.Point(384, 99);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(710, 419);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(811, 559);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHỨC NĂNG";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(488, 214);
+            this.button6.Location = new System.Drawing.Point(558, 285);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 123);
+            this.button6.Size = new System.Drawing.Size(159, 164);
             this.button6.TabIndex = 0;
             this.button6.Text = "THÔNG TIN HÀNG HÓA";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(283, 214);
+            this.button5.Location = new System.Drawing.Point(323, 285);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(139, 123);
+            this.button5.Size = new System.Drawing.Size(159, 164);
             this.button5.TabIndex = 0;
             this.button5.Text = "NHÀ CUNG CẤP";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(81, 214);
+            this.button4.Location = new System.Drawing.Point(93, 285);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 123);
+            this.button4.Size = new System.Drawing.Size(159, 164);
             this.button4.TabIndex = 0;
             this.button4.Text = "KHÁCH HÀNG";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(488, 50);
+            this.button3.Location = new System.Drawing.Point(558, 67);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 123);
+            this.button3.Size = new System.Drawing.Size(159, 164);
             this.button3.TabIndex = 0;
             this.button3.Text = "THÊM LOẠI HÀNG";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(283, 50);
+            this.button2.Location = new System.Drawing.Point(323, 67);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 123);
+            this.button2.Size = new System.Drawing.Size(159, 164);
             this.button2.TabIndex = 0;
             this.button2.Text = "XUẤT HÀNG";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TuyChon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 723);
+            this.ClientSize = new System.Drawing.Size(1566, 964);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TuyChon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TuyChon";

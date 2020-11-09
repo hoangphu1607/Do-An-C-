@@ -55,3 +55,4 @@ D:\c#\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.genrun
 >>>>>>> 3cff44690b454c72aac69c5566b0abfdcc9cf634
 D:\c#\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Nhaphang.resources
 D:\c#\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Xuấtkho.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\QuanLyKho\obj\Debug\netcoreapp3.1\QuanLyKho.Xuatkho.resources

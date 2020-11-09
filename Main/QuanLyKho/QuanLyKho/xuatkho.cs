@@ -8,22 +8,14 @@ using System.Windows.Forms;
 
 namespace QuanLyKho
 {
-    public partial class Xuấtkho : Form
+    public partial class xuatkho : Form
     {
-        public Xuấtkho()
+        public xuatkho()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         
     }

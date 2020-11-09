@@ -25,5 +25,11 @@ namespace QuanLyKho
             Nhaphang a = new Nhaphang();
             a.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            xuatkho a = new xuatkho();
+            a.Show();
+        }
     }
 }

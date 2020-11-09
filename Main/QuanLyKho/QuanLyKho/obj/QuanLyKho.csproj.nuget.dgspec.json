@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\github\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj": {}
+    "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj": {}
   },
   "projects": {
-    "E:\\github\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj": {
+    "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\github\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj",
+        "projectUniqueName": "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj",
         "projectName": "QuanLyKho",
-        "projectPath": "E:\\github\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\github\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\obj\\",
+        "projectPath": "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\QuanLyKho.csproj",
+        "packagesPath": "C:\\Users\\DUY LONG\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\Do-An-C-\\Main\\QuanLyKho\\QuanLyKho\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DUY LONG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

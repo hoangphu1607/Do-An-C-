@@ -1,0 +1,12 @@
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.DangNhap.resources
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.QuanLyKho.resources
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.KhachHang.resources

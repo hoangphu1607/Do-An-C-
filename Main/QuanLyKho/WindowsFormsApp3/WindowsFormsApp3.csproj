@@ -46,12 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatThongTin_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTin_KH.Designer.cs">
+      <DependentUpon>CapNhatThongTin_KH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ds_khachhangthanthiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ds_khachhangthanthiet.Designer.cs">
+      <DependentUpon>ds_khachhangthanthiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ds_khachhangtiemnang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ds_khachhangtiemnang.Designer.cs">
+      <DependentUpon>ds_khachhangtiemnang.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
@@ -79,8 +97,17 @@
     <Compile Include="xuatkho.Designer.cs">
       <DependentUpon>xuatkho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapNhatThongTin_KH.resx">
+      <DependentUpon>CapNhatThongTin_KH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ds_khachhangthanthiet.resx">
+      <DependentUpon>ds_khachhangthanthiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ds_khachhangtiemnang.resx">
+      <DependentUpon>ds_khachhangtiemnang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>

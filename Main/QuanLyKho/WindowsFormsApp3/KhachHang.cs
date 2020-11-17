@@ -23,8 +23,7 @@ namespace WindowsFormsApp3
         //Connection conn = new Connection();
 
         SqlConnection conn= new SqlConnection(@"Data Source=DESKTOP-N15KRQ0\SQLEXPRESS;Initial Catalog=QLKho;Integrated Security=True");
-        
-        BindingNavigator a = new BindingNavigator();
+                
         SqlCommand comm;
         string sql = "",moi = "",up="";
         double number = 0;
@@ -40,15 +39,15 @@ namespace WindowsFormsApp3
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM KHACH_HANG", conn);
-            DataTable table = new DataTable();
-            dap.Fill(table);
-            //dgv_khachhang.AutoGenerateColumns = false;
-            dgv_khachhang.DataSource = table;
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM KHACH_HANG", conn);
+        //    DataTable table = new DataTable();
+        //    dap.Fill(table);
+        //    //dgv_khachhang.AutoGenerateColumns = false;
+        //    dgv_khachhang.DataSource = table;
 
-        }
+        //}
 
         private void KhachHang_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -57,8 +56,17 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgv_khachhang.Rows.Add(txt_makh.Text,txt_ten.Text,txt_sdt.Text,txt_diachi.Text);
-
+            if (txt_ten.Text.Equals(""))
+            {
+                MessageBox.Show("Tên Không Được Trống");
+                return;
+            }
+                
+            dgv_khachhang.Rows.Add(txt_makh.Text,txt_ten.Text,txt_sdt.Text,cbb_diachi.Text);
+            txt_makh.Clear();
+            txt_ten.Clear();
+            txt_sdt.Clear();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -95,6 +103,11 @@ namespace WindowsFormsApp3
             
         }
 
+        private void txt_ten_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             if (conn.State == ConnectionState.Closed)
@@ -124,7 +137,13 @@ namespace WindowsFormsApp3
         {
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
-            for (int i = 0; i < dgv_khachhang.Rows.Count; i++)
+            if(dgv_khachhang.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu");
+                return;
+            }
+            int i = 0;
+            for (i = 0; i < dgv_khachhang.Rows.Count; i++)
             {
                 string makh = "", tenkhach = "", sdt = "", diachi = "";
                 makh += dgv_khachhang.Rows[i].Cells["MaKhachHang"].Value;
@@ -135,18 +154,23 @@ namespace WindowsFormsApp3
                 string sql = "INSERT INTO KHACH_HANG VALUES ('" + makh + "', N'" + tenkhach + "', N'" + diachi  +"','"+ sdt  + "');";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
-
-                if(i == dgv_khachhang.Rows.Count)
-                {
-                    up = "UPDATE MaKhachMoiNhat SET MaKhachHang = "+ moi; 
-                }    
+                //makh = "";
+                //tenkhach = "";
+                //sdt = "";
+                //diachi = "";
+                    
             }
+            
+                up = "UPDATE MaKhachMoiNhat SET MaKhachHang = '" + moi + "';";
+                comm = new SqlCommand(up, conn);
+                comm.ExecuteNonQuery();
+            
             conn.Close();
-
+            MessageBox.Show("Cập Nhật Dữ Liệu Thành Công!");
             txt_makh.Clear();
             txt_ten.Clear();
             txt_sdt.Clear();
-            txt_sdt.Clear();
+            
             //if(i == dgv_khachhang.Rows.Count - 1)
             //{
             //    up = @"UPDATE" 

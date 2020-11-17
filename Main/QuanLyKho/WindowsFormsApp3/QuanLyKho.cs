@@ -30,12 +30,36 @@ namespace WindowsFormsApp3
         private void mn_capnhatKhachHang_Click(object sender, EventArgs e)
         {
             KhachHang kh = new KhachHang();
-            kh.Show();
+            kh.ShowDialog();
+            //kh.MdiParent = this;
         }
 
         private void QuanLyKho_Load(object sender, EventArgs e)
         {
+           
+        }
+
+        private void danhSáchKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             
+        }
+
+        private void kháchHàngTìmNăngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ds_khachhangtiemnang dskh_tn = new ds_khachhangtiemnang();
+            dskh_tn.ShowDialog();
+        }
+
+        private void kháchHàngThânThiếtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ds_khachhangthanthiet dskh_tt = new ds_khachhangthanthiet();
+            dskh_tt.ShowDialog();
+        }
+
+        private void mn_cnkh_Click(object sender, EventArgs e)
+        {
+            CapNhatThongTin_KH capnhat_kh = new CapNhatThongTin_KH();
+            capnhat_kh.ShowDialog();
         }
     }
 }

@@ -56,12 +56,25 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            if (txt_makh.Text.Equals(""))
+            {
+                MessageBox.Show("Mã Khách Hàng Không Được Trống");
+                return;
+            }
             if (txt_ten.Text.Equals(""))
             {
                 MessageBox.Show("Tên Không Được Trống");
                 return;
+            }  
+            if(txt_sdt.Text.Length != 10 || txt_sdt.Text.Equals(""))
+            {
+                MessageBox.Show("Số Điện Thoại Sai");
+                return;
             }
-                
+
+            string[] arr = txt_ten.Text.Split(' ');
+
             dgv_khachhang.Rows.Add(txt_makh.Text,txt_ten.Text,txt_sdt.Text,cbb_diachi.Text);
             txt_makh.Clear();
             txt_ten.Clear();
@@ -106,6 +119,19 @@ namespace WindowsFormsApp3
         private void txt_ten_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_sdt_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_sdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

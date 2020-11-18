@@ -73,9 +73,9 @@ namespace WindowsFormsApp3
                 return;
             }
 
-            string[] arr = txt_ten.Text.Split(' ');
+            //string[] arr = txt_ten.Text.Split(' ');
 
-            dgv_khachhang.Rows.Add(txt_makh.Text,txt_ten.Text,txt_sdt.Text,cbb_diachi.Text);
+            dgv_khachhang.Rows.Add(txt_makh.Text,txt_ten.Text,txt_sdt.Text,cbb_diachi.Text,cbb_loaikh.Text);
             txt_makh.Clear();
             txt_ten.Clear();
             txt_sdt.Clear();
@@ -134,6 +134,11 @@ namespace WindowsFormsApp3
             }
         }
 
+        private void dgv_khachhang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             if (conn.State == ConnectionState.Closed)
@@ -161,46 +166,52 @@ namespace WindowsFormsApp3
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
-            if(dgv_khachhang.Rows.Count == 0)
+            if (dgv_khachhang.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu");
                 return;
             }
             int i = 0;
+            string makh, tenkhach, sdt, diachi,loaikh;
             for (i = 0; i < dgv_khachhang.Rows.Count; i++)
-            {
-                string makh = "", tenkhach = "", sdt = "", diachi = "";
-                makh += dgv_khachhang.Rows[i].Cells["MaKhachHang"].Value;
-                tenkhach += dgv_khachhang.Rows[i].Cells["TenKhach"].Value;
-                sdt += dgv_khachhang.Rows[i].Cells["SDT"].Value;
-                diachi += dgv_khachhang.Rows[i].Cells["Diachi"].Value;
+            {                
+                makh = dgv_khachhang.Rows[i].Cells["MaKhachHang"].Value.ToString();
+                tenkhach = dgv_khachhang.Rows[i].Cells["TenKhach"].Value.ToString();
+                sdt = dgv_khachhang.Rows[i].Cells["SDT"].Value.ToString();
+                diachi = dgv_khachhang.Rows[i].Cells["Diachi"].Value.ToString();
+                loaikh = dgv_khachhang.Rows[i].Cells["LoaiKH"].Value.ToString();
 
-                string sql = "INSERT INTO KHACH_HANG VALUES ('" + makh + "', N'" + tenkhach + "', N'" + diachi  +"','"+ sdt  + "');";
+                string sql = "INSERT INTO KHACH_HANG VALUES ('" + makh + "', N'" + tenkhach + "', N'" + diachi + "','" + sdt + "', N'"+ loaikh + "');";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
                 //makh = "";
                 //tenkhach = "";
                 //sdt = "";
                 //diachi = "";
-                    
+
             }
-            
-                up = "UPDATE MaKhachMoiNhat SET MaKhachHang = '" + moi + "';";
-                comm = new SqlCommand(up, conn);
-                comm.ExecuteNonQuery();
-            
+
+            up = "UPDATE MaKhachMoiNhat SET MaKhachHang = '" + moi + "';";
+            comm = new SqlCommand(up, conn);
+            comm.ExecuteNonQuery();
+
             conn.Close();
             MessageBox.Show("Cập Nhật Dữ Liệu Thành Công!");
             txt_makh.Clear();
             txt_ten.Clear();
             txt_sdt.Clear();
-            
-            //if(i == dgv_khachhang.Rows.Count - 1)
-            //{
-            //    up = @"UPDATE" 
-            //}
+
+            //dataTable.Clear();
+            dgv_khachhang.Rows.Clear();
+            dgv_khachhang.Refresh();
+
+            ////if(i == dgv_khachhang.Rows.Count - 1)
+            ////{
+            ////    up = @"UPDATE" 
+            ////}
         }
     }
 }

@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.dgv_khachhang = new System.Windows.Forms.DataGridView();
-            this.MaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbb_diachi = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +41,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.cbb_loaikh = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.MaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_khachhang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,50 +64,18 @@
             this.MaKhachHang,
             this.TenKhach,
             this.SDT,
-            this.DiaChi});
+            this.DiaChi,
+            this.LoaiKH});
             this.dgv_khachhang.Location = new System.Drawing.Point(379, 280);
             this.dgv_khachhang.Name = "dgv_khachhang";
             this.dgv_khachhang.Size = new System.Drawing.Size(832, 591);
             this.dgv_khachhang.TabIndex = 0;
-            // 
-            // MaKhachHang
-            // 
-            this.MaKhachHang.DataPropertyName = "MaKhachHang";
-            this.MaKhachHang.Frozen = true;
-            this.MaKhachHang.HeaderText = "ID";
-            this.MaKhachHang.Name = "MaKhachHang";
-            this.MaKhachHang.ReadOnly = true;
-            this.MaKhachHang.Width = 150;
-            // 
-            // TenKhach
-            // 
-            this.TenKhach.DataPropertyName = "TenKhach";
-            this.TenKhach.Frozen = true;
-            this.TenKhach.HeaderText = "Tên Khách Hàng";
-            this.TenKhach.Name = "TenKhach";
-            this.TenKhach.ReadOnly = true;
-            this.TenKhach.Width = 300;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.Frozen = true;
-            this.SDT.HeaderText = "Số Điện Thoại";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            this.SDT.Width = 150;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "Diachi";
-            this.DiaChi.Frozen = true;
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            this.DiaChi.Width = 200;
+            this.dgv_khachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_khachhang_CellClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbb_loaikh);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbb_diachi);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label4);
@@ -195,17 +166,6 @@
             this.cbb_diachi.Name = "cbb_diachi";
             this.cbb_diachi.Size = new System.Drawing.Size(191, 28);
             this.cbb_diachi.TabIndex = 10;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.daucong;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(351, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 29);
-            this.button3.TabIndex = 9;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -301,6 +261,82 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.daucong;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(351, 39);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(32, 29);
+            this.button3.TabIndex = 9;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cbb_loaikh
+            // 
+            this.cbb_loaikh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_loaikh.FormattingEnabled = true;
+            this.cbb_loaikh.Items.AddRange(new object[] {
+            "Khách Hàng Tiềm Năng",
+            "Khách Hàng Thân Thiết"});
+            this.cbb_loaikh.Location = new System.Drawing.Point(188, 135);
+            this.cbb_loaikh.Name = "cbb_loaikh";
+            this.cbb_loaikh.Size = new System.Drawing.Size(191, 28);
+            this.cbb_loaikh.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(47, 138);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Loại Khách Hàng";
+            // 
+            // MaKhachHang
+            // 
+            this.MaKhachHang.DataPropertyName = "MaKhachHang";
+            this.MaKhachHang.Frozen = true;
+            this.MaKhachHang.HeaderText = "ID";
+            this.MaKhachHang.Name = "MaKhachHang";
+            this.MaKhachHang.ReadOnly = true;
+            this.MaKhachHang.Width = 120;
+            // 
+            // TenKhach
+            // 
+            this.TenKhach.DataPropertyName = "TenKhach";
+            this.TenKhach.Frozen = true;
+            this.TenKhach.HeaderText = "Tên Khách Hàng";
+            this.TenKhach.Name = "TenKhach";
+            this.TenKhach.ReadOnly = true;
+            this.TenKhach.Width = 250;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.Frozen = true;
+            this.SDT.HeaderText = "Số Điện Thoại";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            this.SDT.Width = 150;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "Diachi";
+            this.DiaChi.Frozen = true;
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // LoaiKH
+            // 
+            this.LoaiKH.DataPropertyName = "LoaiKH";
+            this.LoaiKH.Frozen = true;
+            this.LoaiKH.HeaderText = "Loại Khách Hàng";
+            this.LoaiKH.Name = "LoaiKH";
+            this.LoaiKH.ReadOnly = true;
+            this.LoaiKH.Width = 170;
+            // 
             // KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,12 +373,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox cbb_diachi;
+        private System.Windows.Forms.ComboBox cbb_loaikh;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhach;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox cbb_diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiKH;
     }
 }

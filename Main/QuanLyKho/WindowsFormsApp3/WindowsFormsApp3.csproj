@@ -46,12 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatThongTin_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTin_KH.Designer.cs">
+      <DependentUpon>CapNhatThongTin_KH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSach_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSach_NhanVien.Designer.cs">
+      <DependentUpon>DanhSach_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ds_khachhangthanthiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ds_khachhangthanthiet.Designer.cs">
+      <DependentUpon>ds_khachhangthanthiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ds_khachhangtiemnang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ds_khachhangtiemnang.Designer.cs">
+      <DependentUpon>ds_khachhangtiemnang.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
@@ -73,14 +97,32 @@
     <Compile Include="QuanLyKho.Designer.cs">
       <DependentUpon>QuanLyKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Them_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Them_NhanVien.Designer.cs">
+      <DependentUpon>Them_NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="xuatkho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="xuatkho.Designer.cs">
       <DependentUpon>xuatkho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapNhatThongTin_KH.resx">
+      <DependentUpon>CapNhatThongTin_KH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSach_NhanVien.resx">
+      <DependentUpon>DanhSach_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ds_khachhangthanthiet.resx">
+      <DependentUpon>ds_khachhangthanthiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ds_khachhangtiemnang.resx">
+      <DependentUpon>ds_khachhangtiemnang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>
@@ -96,9 +138,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuanLyKho.resx">
       <DependentUpon>QuanLyKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Them_NhanVien.resx">
+      <DependentUpon>Them_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xuatkho.resx">
       <DependentUpon>xuatkho.cs</DependentUpon>
@@ -115,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daucong.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

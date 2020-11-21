@@ -84,5 +84,17 @@ namespace WindowsFormsApp3
             CapNhat_NhanVien a = new CapNhat_NhanVien();
             a.ShowDialog();
         }
+
+        private void thôngTinHàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongTinHangHoa a = new ThongTinHangHoa();
+            a.ShowDialog();
+        }
+
+        private void nhậpHàngVàoKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhapKho a = new NhapKho();
+            a.ShowDialog();
+        }
     }
 }

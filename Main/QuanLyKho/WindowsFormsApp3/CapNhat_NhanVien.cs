@@ -72,7 +72,7 @@ namespace WindowsFormsApp3
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
 
-                sql = "UPDATE NHAN_VIEN SET Diachi = '" + cbb_diachi.SelectedItem.ToString() + "' WHERE MaNhanVien = '" + txt_manv.Text + "';";
+                sql = "UPDATE NHAN_VIEN SET DiaChi = '" + cbb_diachi.SelectedItem.ToString() + "' WHERE MaNhanVien = '" + txt_manv.Text + "';";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
 

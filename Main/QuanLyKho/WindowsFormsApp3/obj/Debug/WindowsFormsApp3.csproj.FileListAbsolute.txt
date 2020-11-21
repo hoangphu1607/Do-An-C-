@@ -56,3 +56,4 @@ D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CapNhatThongTin_KH.resources
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.DanhSach_NhanVien.resources
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Them_NhanVien.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CapNhat_NhanVien.resources

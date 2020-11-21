@@ -81,7 +81,8 @@ namespace WindowsFormsApp3
 
         private void cậpNhậtThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            CapNhat_NhanVien a = new CapNhat_NhanVien();
+            a.ShowDialog();
         }
     }
 }

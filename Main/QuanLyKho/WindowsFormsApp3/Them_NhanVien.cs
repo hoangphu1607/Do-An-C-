@@ -89,6 +89,11 @@ namespace WindowsFormsApp3
             conn.Close();
         }
 
+        private void Them_NhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             if (conn.State == ConnectionState.Closed)

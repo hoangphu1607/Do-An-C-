@@ -66,6 +66,19 @@ namespace WindowsFormsApp3
         {
             if (!txt_makh.Text.Equals(""))
             {
+                //kiểm tra xem tên nhân viên có trống hay không => nếu trống thì không thêm
+                if (txt_ten.Text.Equals(""))
+                {
+                    MessageBox.Show("Tên Không Được Trống");
+                    return;
+                }
+
+                if (txt_sdt.Text.Length >= 1 && txt_sdt.Text.Length <= 9 || txt_sdt.Text.Length > 10)
+                {
+                    MessageBox.Show("Số Điện Thoại Sai");
+                    return;
+                }
+
                 conn.Open();
                 sql = "UPDATE KHACH_HANG SET SDT = '" + txt_sdt.Text + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
                 comm = new SqlCommand(sql, conn);

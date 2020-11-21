@@ -52,6 +52,12 @@
     <Compile Include="CapNhatThongTin_KH.Designer.cs">
       <DependentUpon>CapNhatThongTin_KH.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapNhat_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhat_NhanVien.Designer.cs">
+      <DependentUpon>CapNhat_NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
@@ -111,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="CapNhatThongTin_KH.resx">
       <DependentUpon>CapNhatThongTin_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhat_NhanVien.resx">
+      <DependentUpon>CapNhat_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>

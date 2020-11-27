@@ -1,0 +1,68 @@
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.DangNhap.resources
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.QuanLyKho.resources
+D:\C#\Form\Ket Noi SQL\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.KhachHang.resources
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.DangNhap.resources
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.KhachHang.resources
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.QuanLyKho.resources
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+E:\github\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.NhapKho.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.DangNhap.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.KhachHang.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.NhapKho.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.QuanLyKho.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.xuatkho.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.DangNhap.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.KhachHang.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.NhapKho.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.QuanLyKho.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.xuatkho.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ds_khachhangthanthiet.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ds_khachhangtiemnang.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CapNhatThongTin_KH.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.DanhSach_NhanVien.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Them_NhanVien.resources
+<<<<<<< HEAD
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CapNhatThongTin_KH.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.DanhSach_NhanVien.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ds_khachhangthanthiet.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ds_khachhangtiemnang.resources
+D:\c#\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Them_NhanVien.resources
+=======
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CapNhat_NhanVien.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ThongTinHangHoa.resources
+>>>>>>> 10a4a072443689374e99fe685bd150c1a3117ed0

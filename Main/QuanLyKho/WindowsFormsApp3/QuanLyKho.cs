@@ -95,6 +95,7 @@ namespace WindowsFormsApp3
         {
             NhapKho a = new NhapKho();
             a.ShowDialog();
+
         }
     }
 }

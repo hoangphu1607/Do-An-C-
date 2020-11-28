@@ -64,21 +64,13 @@ namespace WindowsFormsApp3
                 }
 
                 conn.Open();
-                sql = "UPDATE NHAN_VIEN SET DienThoai = '" + txt_sdt.Text + "' WHERE MaNhanVien = '" + txt_manv.Text + "';";
+                sql = "UPDATE NHAN_VIEN SET DienThoai = '" + txt_sdt.Text + "', TenNhanVien = N'" +txt_tennv.Text +"', DiaChi = N'"+cbb_diachi.SelectedItem.ToString()+"' WHERE MaNhanVien = '" + txt_manv.Text + "';";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
 
-                sql = "UPDATE NHAN_VIEN SET TenNhanVien = N'" + txt_tennv.Text + "' WHERE MaNhanVien = '" + txt_manv.Text + "';";
-                comm = new SqlCommand(sql, conn);
-                comm.ExecuteNonQuery();
+                
 
-                sql = "UPDATE NHAN_VIEN SET DiaChi = '" + cbb_diachi.SelectedItem.ToString() + "' WHERE MaNhanVien = '" + txt_manv.Text + "';";
-                comm = new SqlCommand(sql, conn);
-                comm.ExecuteNonQuery();
-
-                //sql = "UPDATE KHACH_HANG SET LoaiKH = N'" + cbb_loaikh.SelectedItem.ToString() + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
-                //comm = new SqlCommand(sql, conn);
-                //comm.ExecuteNonQuery();
+                
 
                 conn.Close();
                 this.loadData();

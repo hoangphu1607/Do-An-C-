@@ -80,21 +80,21 @@ namespace WindowsFormsApp3
                 }
 
                 conn.Open();
-                sql = "UPDATE KHACH_HANG SET SDT = '" + txt_sdt.Text + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
+                sql = "UPDATE KHACH_HANG SET SDT = '" + txt_sdt.Text + "',TenKhach = N'" + txt_ten.Text+"', Diachi = N'"+ cbb_diachi.SelectedItem.ToString() + "', LoaiKH = N'" + cbb_loaikh.SelectedItem.ToString() + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
 
-                sql = "UPDATE KHACH_HANG SET TenKhach = N'" + txt_ten.Text + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
-                comm = new SqlCommand(sql, conn);
-                comm.ExecuteNonQuery();
+                //sql = "UPDATE KHACH_HANG SET TenKhach = N'" + txt_ten.Text + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
+                //comm = new SqlCommand(sql, conn);
+                //comm.ExecuteNonQuery();
 
-                sql = "UPDATE KHACH_HANG SET Diachi = '" + cbb_diachi.SelectedItem.ToString() + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
-                comm = new SqlCommand(sql, conn);
-                comm.ExecuteNonQuery();
+                //sql = "UPDATE KHACH_HANG SET Diachi = '" + cbb_diachi.SelectedItem.ToString() + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
+                //comm = new SqlCommand(sql, conn);
+                //comm.ExecuteNonQuery();
 
-                sql = "UPDATE KHACH_HANG SET LoaiKH = N'" + cbb_loaikh.SelectedItem.ToString() + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
-                comm = new SqlCommand(sql, conn);
-                comm.ExecuteNonQuery();
+                //sql = "UPDATE KHACH_HANG SET LoaiKH = N'" + cbb_loaikh.SelectedItem.ToString() + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
+                //comm = new SqlCommand(sql, conn);
+                //comm.ExecuteNonQuery();
 
                 conn.Close();
                 this.loadData();

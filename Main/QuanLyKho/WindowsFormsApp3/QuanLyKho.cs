@@ -30,7 +30,8 @@ namespace WindowsFormsApp3
         private void mn_capnhatKhachHang_Click(object sender, EventArgs e)
         {
             KhachHang kh = new KhachHang();
-            kh.ShowDialog();
+            kh.MdiParent = this;
+            kh.Show();
             //kh.MdiParent = this;
         }
 
@@ -47,19 +48,22 @@ namespace WindowsFormsApp3
         private void kháchHàngTìmNăngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ds_khachhangtiemnang dskh_tn = new ds_khachhangtiemnang();
-            dskh_tn.ShowDialog();
+            dskh_tn.MdiParent = this;
+            dskh_tn.Show();
         }
 
         private void kháchHàngThânThiếtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ds_khachhangthanthiet dskh_tt = new ds_khachhangthanthiet();
-            dskh_tt.ShowDialog();
+            dskh_tt.MdiParent = this;
+            dskh_tt.Show();
         }
 
         private void mn_cnkh_Click(object sender, EventArgs e)
         {
             CapNhatThongTin_KH capnhat_kh = new CapNhatThongTin_KH();
-            capnhat_kh.ShowDialog();
+            capnhat_kh.MdiParent = this;
+            capnhat_kh.Show();
         }
 
         private void nhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,32 +74,44 @@ namespace WindowsFormsApp3
         private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DanhSach_NhanVien a = new DanhSach_NhanVien();
-            a.ShowDialog();
+            a.MdiParent = this;
+            a.Show();
         }
 
         private void thêmNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Them_NhanVien a = new Them_NhanVien();
-            a.ShowDialog();
+            a.MdiParent = this;
+            a.Show();
         }
 
         private void cậpNhậtThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CapNhat_NhanVien a = new CapNhat_NhanVien();
-            a.ShowDialog();
+            a.MdiParent = this;
+            a.Show();
         }
 
         private void thôngTinHàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ThongTinHangHoa a = new ThongTinHangHoa();
-            a.ShowDialog();
+            a.MdiParent = this;
+            a.Show();
         }
 
         private void nhậpHàngVàoKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NhapKho a = new NhapKho();
-            a.ShowDialog();
+            a.MdiParent = this;
+            a.Show();
 
+        }
+
+        private void xuấtHàngKhỏiKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            xuatkho xuatkho = new xuatkho();
+            xuatkho.MdiParent = this;
+            xuatkho.Show();
         }
     }
 }

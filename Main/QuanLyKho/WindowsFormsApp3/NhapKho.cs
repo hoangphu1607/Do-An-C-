@@ -17,6 +17,10 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-N15KRQ0\SQLEXPRESS;Initial Catalog=QLKho;Integrated Security=True");
+        SqlCommand comm;
+        string moi = "";
+        int dem = 0;
+        double number = 0;
         private void NhapKho_Load(object sender, EventArgs e)
         {
             //đổ dữ liệu từ sql sang combox nhân viên
@@ -25,9 +29,9 @@ namespace WindowsFormsApp3
             SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM NHAN_VIEN", conn);
             DataTable table = new DataTable();
             dap.Fill(table);
-            cb_manhanvien.DataSource = table;
-            cb_manhanvien.DisplayMember = "MaNhanVien";
-            cb_manhanvien.ValueMember = "TenNhanVien";
+            cb_tennv.DataSource = table;
+            cb_tennv.DisplayMember = "TenNhanVien";
+            cb_tennv.ValueMember = "MaNhanVien";
 
             //đổ dữ liệu từ sql sang combox nhà cung cấp
 
@@ -38,25 +42,25 @@ namespace WindowsFormsApp3
             
             cb_nhacungcap.ValueMember = "MaNhaCungCap";
             cb_nhacungcap.DisplayMember = "TenNhaCungCap";
-            txt_tennhanvien.Text = cb_manhanvien.SelectedValue.ToString();
+            txt_manv.Text = cb_tennv.SelectedValue.ToString();
 
             //đổ dữ liệu từ sql sang 
             dap = new SqlDataAdapter("SELECT * FROM HANG_HOA", conn);
             //DataSet ds = new DataSet();
             table = new DataTable();
             dap.Fill(table);
-            cb_masanpham.DataSource = table;
-            cb_masanpham.DisplayMember = "MaHang";
-            cb_masanpham.ValueMember = "MaHang";
+            cb_tensp.DataSource = table;
+            cb_tensp.DisplayMember = "TenHang";
+            cb_tensp.ValueMember = "MaHang";
 
-            txt_tensanpham.DataBindings.Clear();
-            txt_tensanpham.DataBindings.Add("Text", cb_masanpham.DataSource, "TenHang");
+            txt_masp.DataBindings.Clear();
+            txt_masp.DataBindings.Add("Text", cb_tensp.DataSource, "MaHang");
 
             txt_dongia.DataBindings.Clear();
-            txt_dongia.DataBindings.Add("Text", cb_masanpham.DataSource, "DonGia");
+            txt_dongia.DataBindings.Add("Text", cb_tensp.DataSource, "DonGia");
 
             txt_donvitinh.DataBindings.Clear();
-            txt_donvitinh.DataBindings.Add("Text", cb_masanpham.DataSource, "DonViTinh");
+            txt_donvitinh.DataBindings.Add("Text", cb_tensp.DataSource, "DonViTinh");
 
 
             //txt_tensanpham.Text = cb_masanpham.SelectedValue.ToString();
@@ -65,7 +69,7 @@ namespace WindowsFormsApp3
 
         private void cb_manhanvien_SelectedIndexChanged(object sender, EventArgs e)
         {            
-            txt_tennhanvien.Text = cb_manhanvien.SelectedValue.ToString(); 
+            txt_manv.Text = cb_tennv.SelectedValue.ToString(); 
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -73,16 +77,41 @@ namespace WindowsFormsApp3
 
         }
 
+        public bool check_dk()
+        {
+            if (dgv_NhapHang.Rows.Count == 0)
+                return true;
+            else
+            {
+                string check = txt_masp.Text, mahang;
+                for (int i = 0; i < dgv_NhapHang.Rows.Count; i++)
+                {
+                    mahang = dgv_NhapHang.Rows[i].Cells["MaHang"].Value.ToString();
+                    if (mahang.Equals(check))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+           
+        }
         private void cb_masanpham_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_tensanpham.DataBindings.Clear();
-            txt_tensanpham.DataBindings.Add("Text", cb_masanpham.DataSource, "TenHang");
+            
+            
+                txt_masp.DataBindings.Clear();
+                txt_masp.DataBindings.Add("Text", cb_tensp.DataSource, "MaHang");
 
-            txt_dongia.DataBindings.Clear();
-            txt_dongia.DataBindings.Add("Text", cb_masanpham.DataSource, "DonGia");
+                txt_dongia.DataBindings.Clear();
+                txt_dongia.DataBindings.Add("Text", cb_tensp.DataSource, "DonGia");
 
-            txt_donvitinh.DataBindings.Clear();
-            txt_donvitinh.DataBindings.Add("Text", cb_masanpham.DataSource, "DonViTinh");
+                txt_donvitinh.DataBindings.Clear();
+                txt_donvitinh.DataBindings.Add("Text", cb_tensp.DataSource, "DonViTinh");
+            
+           
+
+            
         }
 
         private void txt_tensanpham_TextChanged(object sender, EventArgs e)
@@ -97,16 +126,20 @@ namespace WindowsFormsApp3
 
         private void bt_them_Click(object sender, EventArgs e)
         {
-            if (txt_masophieu.Text.Equals(""))
+            if (check_dk())
             {
-                MessageBox.Show("Không được bỏ trống");
-                return;
+                if (txt_masophieu.Text.Equals(""))
+                {
+                    MessageBox.Show("Không được bỏ trống");
+                    return;
+                }
+                dgv_NhapHang.Rows.Add(cb_tensp.Text, txt_masp.Text, txt_donvitinh.Text, nbu_sl.Value.ToString(), txt_dongia.Text);
             }
-            dgv_NhapHang.Rows.Add(cb_masanpham.Text,txt_tensanpham.Text,nbu_sl.Value,txt_dongia.Text);
-
-
-
-            
+            else
+            {
+                MessageBox.Show("Dữ Liệu Bạn Chọn Bị Trùng");
+                return;
+            }    
         }
 
         private void bt_xoa_Click(object sender, EventArgs e)
@@ -126,8 +159,8 @@ namespace WindowsFormsApp3
             {
                 int numrow;
                 numrow = e.RowIndex;
-                cb_masanpham.Text = dgv_NhapHang.Rows[numrow].Cells[0].Value.ToString();
-                txt_tensanpham.Text = dgv_NhapHang.Rows[numrow].Cells[1].Value.ToString();
+                cb_tensp.Text = dgv_NhapHang.Rows[numrow].Cells[0].Value.ToString();
+                txt_masp.Text = dgv_NhapHang.Rows[numrow].Cells[1].Value.ToString();
                 nbu_sl.Text = dgv_NhapHang.Rows[numrow].Cells[2].Value.ToString();
                 txt_dongia.Text = dgv_NhapHang.Rows[numrow].Cells[3].Value.ToString();
             }
@@ -144,6 +177,93 @@ namespace WindowsFormsApp3
             //}
                 
             conn.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string msp, ngay, manv;
+            try
+            {
+                string sql = "Insert into  PHIEU_NHAP VALUES ('" + txt_masophieu.Text + "','" + dateTimePicker1.Text + "','" + txt_manv.Text + "')";
+                comm = new SqlCommand(sql, conn);
+                comm.ExecuteNonQuery();
+                MessageBox.Show("Thêm Dữ Liệu Thành Công");
+
+                sql = "UPDATE MaPhieuNhap_MoiNhat SET MaPhieuNhap = '"+txt_masophieu.Text+"'";
+                comm = new SqlCommand(sql, conn);
+                comm.ExecuteNonQuery();
+
+                string maphieu, mahang, soluong, dongia;
+                maphieu = txt_masophieu.Text;
+
+                for (int i = 0; i < dgv_NhapHang.Rows.Count; i++)
+                {
+                    mahang = dgv_NhapHang.Rows[i].Cells["MaHang"].Value.ToString();
+                    soluong = dgv_NhapHang.Rows[i].Cells["SoLuong"].Value.ToString();
+                    dongia = dgv_NhapHang.Rows[i].Cells["DonGia"].Value.ToString();
+
+                    sql = "INSERT INTO CHI_TIET_NHAP VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
+                    comm = new SqlCommand(sql, conn);
+                    comm.ExecuteNonQuery();
+
+                }
+            }
+            catch
+            {
+                throw;
+                //MessageBox.Show("Thêm Dữ Liệu Thất Bại!!!");
+            }            
+
+
+
+
+            conn.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            moi += "";
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            dem++;
+            //double number = 0;
+            if (dem == 1)
+            {
+                string sql = "Select * from MaPhieuNhap_MoiNhat";
+                //tao 1 lenh command
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                //chay datareader
+                SqlDataReader drd = cmd.ExecuteReader();
+                string kq = "";
+                while (drd.Read())
+                {
+                    kq += drd["MaPhieuNhap"].ToString();
+                }
+                //chuyen cac so cuoi thanh so
+                number = Convert.ToDouble(kq.Substring(2));
+                //doi number thanh so            
+                txt_masophieu.Text = "PN" + (number + 1);
+                conn.Close();
+                moi = "PN" + (number + 1);
+            }
+            else
+            {
+                txt_masophieu.Text = "PN" + (number + dem);
+                moi = "PN" + (number + dem);
+                conn.Close();
+            }
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_spmoi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

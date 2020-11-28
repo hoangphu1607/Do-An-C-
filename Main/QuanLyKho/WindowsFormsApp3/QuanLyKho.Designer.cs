@@ -104,6 +104,7 @@
             this.xuấtHàngKhỏiKhoToolStripMenuItem.Name = "xuấtHàngKhỏiKhoToolStripMenuItem";
             this.xuấtHàngKhỏiKhoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.xuấtHàngKhỏiKhoToolStripMenuItem.Text = "Xuất Hàng Khỏi Kho";
+            this.xuấtHàngKhỏiKhoToolStripMenuItem.Click += new System.EventHandler(this.xuấtHàngKhỏiKhoToolStripMenuItem_Click);
             // 
             // xemHàngĐãXuấtToolStripMenuItem
             // 

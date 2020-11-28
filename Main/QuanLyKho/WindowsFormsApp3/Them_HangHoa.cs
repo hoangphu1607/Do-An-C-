@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class xuatkho : Form
+    public partial class Them_HangHoa : Form
     {
-        public xuatkho()
+        public Them_HangHoa()
         {
             InitializeComponent();
         }
 
-        private void txtDiachi_TextChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

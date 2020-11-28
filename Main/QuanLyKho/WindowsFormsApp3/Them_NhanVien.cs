@@ -94,6 +94,11 @@ namespace WindowsFormsApp3
 
         }
 
+        private void cbb_diachi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             if (conn.State == ConnectionState.Closed)

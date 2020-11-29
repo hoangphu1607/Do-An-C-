@@ -263,7 +263,9 @@ namespace WindowsFormsApp3
 
         private void lb_spmoi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Them_HangHoa themHang = new Them_HangHoa();
+            //themHang.MdiParent = this;
+            themHang.Show();
         }
     }
 }

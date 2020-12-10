@@ -113,5 +113,33 @@ namespace WindowsFormsApp3
             xuatkho.MdiParent = this;
             xuatkho.Show();
         }
+
+        private void thêmNhómHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Them_NhomHang frm = new Them_NhomHang();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void thêmHàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Them_HangHoa frm = new Them_HangHoa();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void cậpNhậtHàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CapNhat_HangHoa frm = new CapNhat_HangHoa();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void cậpNhậtNhómHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CapNhat_NhomHang frm = new CapNhat_NhomHang();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lb_spmoi = new System.Windows.Forms.LinkLabel();
             this.nbu_sl = new System.Windows.Forms.NumericUpDown();
             this.txt_donvitinh = new System.Windows.Forms.TextBox();
             this.txt_masp = new System.Windows.Forms.TextBox();
@@ -61,7 +62,6 @@
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.lb_spmoi = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbu_sl)).BeginInit();
@@ -211,6 +211,17 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sản phẩm";
+            // 
+            // lb_spmoi
+            // 
+            this.lb_spmoi.AutoSize = true;
+            this.lb_spmoi.Location = new System.Drawing.Point(187, 82);
+            this.lb_spmoi.Name = "lb_spmoi";
+            this.lb_spmoi.Size = new System.Drawing.Size(156, 20);
+            this.lb_spmoi.TabIndex = 16;
+            this.lb_spmoi.TabStop = true;
+            this.lb_spmoi.Text = "Thêm Sản Phẩm Mới";
+            this.lb_spmoi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_spmoi_LinkClicked);
             // 
             // nbu_sl
             // 
@@ -388,17 +399,6 @@
             this.button1.Text = "Hoàn Thành";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lb_spmoi
-            // 
-            this.lb_spmoi.AutoSize = true;
-            this.lb_spmoi.Location = new System.Drawing.Point(187, 82);
-            this.lb_spmoi.Name = "lb_spmoi";
-            this.lb_spmoi.Size = new System.Drawing.Size(156, 20);
-            this.lb_spmoi.TabIndex = 16;
-            this.lb_spmoi.TabStop = true;
-            this.lb_spmoi.Text = "Thêm Sản Phẩm Mới";
-            this.lb_spmoi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_spmoi_LinkClicked);
             // 
             // NhapKho
             // 

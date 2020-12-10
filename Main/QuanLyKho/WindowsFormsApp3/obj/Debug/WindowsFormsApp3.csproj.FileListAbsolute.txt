@@ -20,3 +20,6 @@ D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Them_HangHoa.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Them_NhomHang.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CapNhat_HangHoa.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CapNhat_NhomHang.resources

@@ -90,7 +90,7 @@ namespace WindowsFormsApp3
             dem++;
             if (dem == 1)
             {                               
-                string sql = "Select * from MaKhachMoiNhat";
+                string sql = "Select * from MaMoiNhat";
                 //tao 1 lenh command
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //chay datareader
@@ -194,7 +194,7 @@ namespace WindowsFormsApp3
 
             }
 
-            up = "UPDATE MaKhachMoiNhat SET MaKhachHang = '" + moi + "';";
+            up = "UPDATE MaMoiNhat SET MaKhachHang = '" + moi + "';";
             comm = new SqlCommand(up, conn);
             comm.ExecuteNonQuery();
 

@@ -62,10 +62,10 @@
             this.MaNhaCungCap,
             this.SoLuong,
             this.DonGia});
-            this.dgv_HangHoa.Location = new System.Drawing.Point(417, 144);
+            this.dgv_HangHoa.Location = new System.Drawing.Point(319, 144);
             this.dgv_HangHoa.Name = "dgv_HangHoa";
             this.dgv_HangHoa.RowHeadersVisible = false;
-            this.dgv_HangHoa.Size = new System.Drawing.Size(996, 452);
+            this.dgv_HangHoa.Size = new System.Drawing.Size(1085, 452);
             this.dgv_HangHoa.TabIndex = 0;
             // 
             // MaHang

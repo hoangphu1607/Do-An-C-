@@ -128,7 +128,7 @@ namespace WindowsFormsApp3
 
             }
 
-            up = "UPDATE MaNhanVienMoiNhat SET MaNhanVien = '" + moi + "';";
+            up = "UPDATE MaMoiNhat SET MaNhanVien = '" + moi + "';";
             comm = new SqlCommand(up, conn);
             comm.ExecuteNonQuery();
 
@@ -138,15 +138,6 @@ namespace WindowsFormsApp3
             txt_tennv.Clear();
             txt_sdt.Clear();
 
-            //dataTable.Clear();
-            //foreach (DataGridViewRow row in dgv_nhanvien.Rows)
-            //{
-            //    try
-            //    {
-            //        dgv_nhanvien.Rows.Remove(row);
-            //    }
-            //    catch (Exception) { }
-            //}
             dgv_nhanvien.Rows.Clear();
             dgv_nhanvien.Refresh();
         }
@@ -159,7 +150,7 @@ namespace WindowsFormsApp3
             dem++;
             if (dem == 1)
             {
-                string sql = "Select * from MaNhanVienMoiNhat";
+                string sql = "Select * from MaMoiNhat";
                 //tao 1 lenh command
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //chay datareader

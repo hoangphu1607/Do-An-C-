@@ -230,7 +230,7 @@ namespace WindowsFormsApp3
             //double number = 0;
             if (dem == 1)
             {
-                string sql = "Select * from MaPhieuNhap_MoiNhat";
+                string sql = "Select * from MaMoiNhat";
                 //tao 1 lenh command
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //chay datareader

@@ -52,11 +52,23 @@
     <Compile Include="CapNhatThongTin_KH.Designer.cs">
       <DependentUpon>CapNhatThongTin_KH.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapNhat_HangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhat_HangHoa.Designer.cs">
+      <DependentUpon>CapNhat_HangHoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapNhat_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CapNhat_NhanVien.Designer.cs">
       <DependentUpon>CapNhat_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhat_NhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhat_NhomHang.Designer.cs">
+      <DependentUpon>CapNhat_NhomHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="DangNhap.cs">
@@ -115,6 +127,12 @@
     <Compile Include="Them_NhanVien.Designer.cs">
       <DependentUpon>Them_NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Them_NhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Them_NhomHang.Designer.cs">
+      <DependentUpon>Them_NhomHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,8 +148,14 @@
     <EmbeddedResource Include="CapNhatThongTin_KH.resx">
       <DependentUpon>CapNhatThongTin_KH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CapNhat_HangHoa.resx">
+      <DependentUpon>CapNhat_HangHoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapNhat_NhanVien.resx">
       <DependentUpon>CapNhat_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhat_NhomHang.resx">
+      <DependentUpon>CapNhat_NhomHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -169,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Them_NhanVien.resx">
       <DependentUpon>Them_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Them_NhomHang.resx">
+      <DependentUpon>Them_NhomHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinHangHoa.resx">
       <DependentUpon>ThongTinHangHoa.cs</DependentUpon>

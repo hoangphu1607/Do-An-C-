@@ -117,7 +117,7 @@ namespace WindowsFormsApp3
         private void lb_spmoi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Them_NhomHang frm = new Them_NhomHang();
-            //frm.MdiParent = this;
+            frm.MdiParent = this.MdiParent;
             frm.Show();
 
         }

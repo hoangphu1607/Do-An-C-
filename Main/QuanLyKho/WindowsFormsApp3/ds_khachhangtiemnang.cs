@@ -30,7 +30,7 @@ namespace WindowsFormsApp3
         private void ds_khachhang_Load(object sender, EventArgs e)
         {
             conn.Open();
-            SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM KHACH_HANG", conn);
+            SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM KHACH_HANG WHERE LoaiKH = N'Khách Hàng Tiềm Năng'", conn);
             DataTable table = new DataTable();
             dap.Fill(table);
             //dgv_khachhang.AutoGenerateColumns = false;

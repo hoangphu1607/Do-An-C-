@@ -190,7 +190,7 @@ namespace WindowsFormsApp3
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Thêm Dữ Liệu Thành Công");
 
-                sql = "UPDATE MaPhieuNhap_MoiNhat SET MaPhieuNhap = '"+txt_masophieu.Text+"'";
+                sql = "UPDATE MaMoiNhat SET MaPhieuNhap = '"+txt_masophieu.Text+"'";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
 

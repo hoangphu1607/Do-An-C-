@@ -64,7 +64,8 @@ namespace WindowsFormsApp3
             txt_dongia.DataBindings.Add("Text", cb_tensp.DataSource, "DonGia");
             txt_donvitinh.DataBindings.Clear();
             txt_donvitinh.DataBindings.Add("Text", cb_tensp.DataSource, "DonViTinh");
-
+            textBox1.DataBindings.Clear();
+            textBox1.DataBindings.Add("Text", cb_tensp.DataSource, "SoLuong");
             SqlDataAdapter dap2 = new SqlDataAdapter("SELECT * FROM HANG_HOA WHERE TenHang = N'"+cb_tensp.Text+"'", conn);
             DataTable table2 = new DataTable();
             dap2.Fill(table2);
@@ -124,6 +125,8 @@ namespace WindowsFormsApp3
             txt_dongia.DataBindings.Add("Text", cb_tensp.DataSource, "DonGia");
             txt_donvitinh.DataBindings.Clear();
             txt_donvitinh.DataBindings.Add("Text", cb_tensp.DataSource, "DonViTinh");
+            textBox1.DataBindings.Clear();
+            textBox1.DataBindings.Add("Text", cb_tensp.DataSource, "SoLuong");
 
             SqlDataAdapter dap2 = new SqlDataAdapter("SELECT * FROM HANG_HOA WHERE TenHang = N'" + cb_tensp.Text + "'", conn);
             DataTable table2 = new DataTable();
@@ -134,6 +137,7 @@ namespace WindowsFormsApp3
 
             cb_nhacc.DataBindings.Clear();
             cb_nhacc.DataBindings.Add("Text", cb_nhacc.DataSource, "MaNhaCungCap");
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -206,6 +210,55 @@ namespace WindowsFormsApp3
                 return true;
             }
 
+        }
+
+        private void bt_xoa_Click(object sender, EventArgs e)
+        {
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            foreach (DataGridViewRow item in this.dgv_xuatkho.SelectedRows)
+            {
+                dgv_xuatkho.Rows.RemoveAt(item.Index);
+            }
+            conn.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            try
+            {
+                string sql = "INSERT INTO PHIEU_XUAT VALUES  ( '"+txt_masophieu.Text+"' , '"+dateTimePicker1.Text+"' ,'"+txt_manv.Text+"' ,'"+txt_maKH.Text+"')";
+                comm = new SqlCommand(sql, conn);
+                comm.ExecuteNonQuery();
+                MessageBox.Show("Thêm Dữ Liệu Thành Công");
+
+                sql = "UPDATE MaMoiNhat SET MaPhieuXuat = '" + txt_masophieu.Text + "'";
+                comm = new SqlCommand(sql, conn);
+                comm.ExecuteNonQuery();
+                string maphieu, mahang, soluong, dongia;
+                maphieu = txt_masophieu.Text;
+
+                for (int i = 0; i < dgv_xuatkho.Rows.Count; i++)
+                {
+                    mahang = dgv_xuatkho.Rows[i].Cells["MaHang"].Value.ToString();
+                    soluong = dgv_xuatkho.Rows[i].Cells["SoLuong"].Value.ToString();
+                    dongia = dgv_xuatkho.Rows[i].Cells["DonGia"].Value.ToString();
+
+                    sql = "INSERT INTO CHI_TIET_XUAT VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
+                    comm = new SqlCommand(sql, conn);
+                    comm.ExecuteNonQuery();
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            conn.Close();
         }
     }
 }

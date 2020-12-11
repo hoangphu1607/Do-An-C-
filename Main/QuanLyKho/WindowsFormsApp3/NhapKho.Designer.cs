@@ -53,7 +53,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.bt_xoa = new System.Windows.Forms.Button();
-            this.bt_sua = new System.Windows.Forms.Button();
             this.bt_them = new System.Windows.Forms.Button();
             this.dgv_NhapHang = new System.Windows.Forms.DataGridView();
             this.TenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -320,16 +319,6 @@
             this.bt_xoa.UseVisualStyleBackColor = true;
             this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click);
             // 
-            // bt_sua
-            // 
-            this.bt_sua.Location = new System.Drawing.Point(800, 508);
-            this.bt_sua.Name = "bt_sua";
-            this.bt_sua.Size = new System.Drawing.Size(75, 23);
-            this.bt_sua.TabIndex = 7;
-            this.bt_sua.Text = "Sửa";
-            this.bt_sua.UseVisualStyleBackColor = true;
-            this.bt_sua.Click += new System.EventHandler(this.bt_sua_Click);
-            // 
             // bt_them
             // 
             this.bt_them.Location = new System.Drawing.Point(690, 508);
@@ -411,7 +400,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bt_xoa);
             this.Controls.Add(this.bt_them);
-            this.Controls.Add(this.bt_sua);
             this.Name = "NhapKho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " n";
@@ -445,7 +433,6 @@
         private System.Windows.Forms.TextBox txt_dongia;
         private System.Windows.Forms.ComboBox cb_tensp;
         private System.Windows.Forms.Button bt_xoa;
-        private System.Windows.Forms.Button bt_sua;
         private System.Windows.Forms.Button bt_them;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

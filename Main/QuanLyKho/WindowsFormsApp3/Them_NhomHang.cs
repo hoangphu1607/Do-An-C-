@@ -25,7 +25,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                string sql = "INSERT INTO NHOM_HANG( MaNhom, TenNhom ) VALUES ('" + txt_manhom.Text + "',N'" + txt_tennhom.Text + "')";
+                string sql = "INSERT INTO NHOM_HANG VALUES ('" + txt_manhom.Text + "',N'" + txt_tennhom.Text + "');";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
                 conn.Close();

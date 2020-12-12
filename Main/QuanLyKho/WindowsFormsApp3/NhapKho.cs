@@ -19,7 +19,7 @@ namespace WindowsFormsApp3
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-N15KRQ0\SQLEXPRESS;Initial Catalog=QLKho;Integrated Security=True");
         SqlCommand comm;
         string moi = "";
-        int dem = 0;
+        int dem = 0,tinh_trang=0;
         double number = 0;
         private void NhapKho_Load(object sender, EventArgs e)
         {
@@ -65,6 +65,14 @@ namespace WindowsFormsApp3
 
             //txt_tensanpham.Text = cb_masanpham.SelectedValue.ToString();
             conn.Close();
+            if (tinh_trang == 0)
+            {
+                groupBox2.Enabled = false;
+                bt_them.Enabled = false;
+                bt_xoa.Enabled = false;
+                bt_hoan_thanh.Enabled = false;
+            }
+            
         }
 
         private void cb_manhanvien_SelectedIndexChanged(object sender, EventArgs e)
@@ -181,19 +189,15 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string msp, ngay, manv;
-            try
+            if(conn.State ==ConnectionState.Closed)
+                conn.Open();
+            if(dgv_NhapHang.Rows.Count == 0 || tinh_trang==0)
             {
-                string sql = "Insert into  PHIEU_NHAP VALUES ('" + txt_masophieu.Text + "','" + dateTimePicker1.Text + "','" + txt_manv.Text + "')";
-                comm = new SqlCommand(sql, conn);
-                comm.ExecuteNonQuery();
-                MessageBox.Show("Thêm Dữ Liệu Thành Công");
-
-                sql = "UPDATE MaMoiNhat SET MaPhieuNhap = '"+txt_masophieu.Text+"'";
-                comm = new SqlCommand(sql, conn);
-                comm.ExecuteNonQuery();
-
+                MessageBox.Show("Không Có Dữ Liệu");
+                return;
+            }
+            try
+            {             
                 string maphieu, mahang, soluong, dongia;
                 maphieu = txt_masophieu.Text;
 
@@ -203,15 +207,33 @@ namespace WindowsFormsApp3
                     soluong = dgv_NhapHang.Rows[i].Cells["SoLuong"].Value.ToString();
                     dongia = dgv_NhapHang.Rows[i].Cells["DonGia"].Value.ToString();
 
-                    sql = "INSERT INTO CHI_TIET_NHAP VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
+                    string sql = "INSERT INTO CHI_TIET_NHAP VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
                     comm = new SqlCommand(sql, conn);
                     comm.ExecuteNonQuery();
 
                 }
+                tinh_trang = 0;
+                if(tinh_trang == 0)
+                {
+                    bt_huy_phieu.Enabled = false;
+                    groupBox2.Enabled = false;
+                    bt_them.Enabled = false;
+                    bt_xoa.Enabled = false;
+                    bt_hoan_thanh.Enabled = false;
+                    bt_lap_phieu.Enabled = true;
+                    bt_themPhieu.Enabled = true;
+                    dateTimePicker1.Enabled = true;
+                    cb_tennv.Enabled = true;
+                    txt_masophieu.Clear();
+                }
+                MessageBox.Show("Hàng Hóa Vào Kho Thành Công");
+
+                dgv_NhapHang.Rows.Clear();
+                dgv_NhapHang.Refresh();
             }
             catch
             {
-                throw;
+                
                 //MessageBox.Show("Thêm Dữ Liệu Thất Bại!!!");
             }            
 
@@ -223,6 +245,11 @@ namespace WindowsFormsApp3
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+            ////TimeSpan te = ngayhientai + 1;
+            //TimeSpan Time = ngaynhap - ngayhientai;
+            ////MessageBox.Show(Time.Days.ToString());
+            //MessageBox.Show("Ngay - Thang - Nam: "+ngay+thang+nam);
             moi += "";
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -264,8 +291,97 @@ namespace WindowsFormsApp3
         private void lb_spmoi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Them_HangHoa themHang = new Them_HangHoa();
-            //themHang.MdiParent = this;
+            themHang.MdiParent = this.MdiParent;
             themHang.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (conn.State == ConnectionState.Closed) {
+                DateTime ngayhientai = DateTime.Today;
+                int ngay, thang, nam;
+                ngay = ngayhientai.Day;
+                thang = ngayhientai.Month;
+                nam = ngayhientai.Year;
+
+                int ngay1, thang1, nam1;
+                DateTime ngaynhap = dateTimePicker1.Value;
+                ngay1 = ngaynhap.Day;
+                thang1 = ngaynhap.Month;
+                nam1 = ngaynhap.Year;
+                bool checkday = false;
+                if (nam - nam1 == 0)
+                {
+                    if (thang - thang1 == 0)
+                    {
+                        if (ngay - ngay1 < 7 && ngay - ngay1 >= 0)
+                        {
+                            MessageBox.Show("Hợp Lệ");
+                            checkday = true;
+                        }
+                    }
+                }
+                if (checkday == false)
+                {
+                    MessageBox.Show("Ngày Không Hợp Lệ");
+                    return;
+                }
+                conn.Open();
+                try
+                {
+                    string sql = "Insert into  PHIEU_NHAP VALUES ('" + txt_masophieu.Text + "','" + dateTimePicker1.Text + "','" + txt_manv.Text + "')";
+                    comm = new SqlCommand(sql, conn);
+                    comm.ExecuteNonQuery();
+                    MessageBox.Show("Lập Phiếu Nhập Thành Công");
+
+                    sql = "UPDATE MaMoiNhat SET MaPhieuNhap = '" + txt_masophieu.Text + "'";
+                    comm = new SqlCommand(sql, conn);
+                    comm.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Mã Phiếu đã tồn tại");
+                }
+                
+
+                dateTimePicker1.Enabled = false;
+                bt_themPhieu.Enabled = false;
+                cb_tennv.Enabled = false;
+                txt_manv.Enabled = false;
+                bt_lap_phieu.Enabled = false;
+                tinh_trang++;
+                if (tinh_trang == 1)
+                {
+                    groupBox2.Enabled = true;
+                    bt_them.Enabled = true;
+                    bt_xoa.Enabled = true;
+                    bt_hoan_thanh.Enabled = true;
+                    bt_huy_phieu.Enabled = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không Thể Kết Nối Đến Dữ Liệu");
+            }
+        }
+
+        private void bt_huy_phieu_Click(object sender, EventArgs e)
+        {
+            txt_masophieu.Clear();
+            dateTimePicker1.Enabled = true;
+            bt_themPhieu.Enabled = true;
+            cb_tennv.Enabled = true;
+            //txt_manv.Enabled = true;
+            bt_lap_phieu.Enabled = true;
+            tinh_trang = 0;
+            if(tinh_trang == 0)
+            {
+                groupBox2.Enabled = false;
+                bt_them.Enabled = false;
+                bt_xoa.Enabled = false;
+                bt_hoan_thanh.Enabled = false;
+            }
         }
     }
 }

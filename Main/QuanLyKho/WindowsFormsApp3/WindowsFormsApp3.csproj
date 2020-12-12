@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +78,12 @@
       <DependentUpon>CapNhat_NhomHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="Hang_Ton_Kho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hang_Ton_Kho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +146,12 @@
     <Compile Include="Them_NhomHang.Designer.cs">
       <DependentUpon>Them_NhomHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKe_HangTrongKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKe_HangTrongKho.Designer.cs">
+      <DependentUpon>ThongKe_HangTrongKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +175,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhat_NhomHang.resx">
       <DependentUpon>CapNhat_NhomHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hang_Ton_Kho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Hang_Ton_Kho.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -197,6 +220,9 @@
     <EmbeddedResource Include="Them_NhomHang.resx">
       <DependentUpon>Them_NhomHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe_HangTrongKho.resx">
+      <DependentUpon>ThongKe_HangTrongKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongTinHangHoa.resx">
       <DependentUpon>ThongTinHangHoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\daucong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

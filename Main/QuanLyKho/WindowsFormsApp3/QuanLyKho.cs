@@ -141,5 +141,12 @@ namespace WindowsFormsApp3
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void hàngTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKe_HangTrongKho frm = new ThongKe_HangTrongKho();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

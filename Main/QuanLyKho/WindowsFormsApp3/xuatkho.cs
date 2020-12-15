@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
         SqlCommand comm;
         string moi = "";
         int dem = 0,tinh_trang=0;
-        double number = 0;
+        double number = 0,thanhtien=0,tong_tien=0;
         public xuatkho()
         {
             InitializeComponent();
@@ -62,11 +62,15 @@ namespace WindowsFormsApp3
             txt_masp.DataBindings.Clear();
             txt_masp.DataBindings.Add("Text", cb_tensp.DataSource, "MaHang");
             txt_dongia.DataBindings.Clear();
-            txt_dongia.DataBindings.Add("Text", cb_tensp.DataSource, "DonGia");
+            txt_dongia.DataBindings.Add("Text", cb_tensp.DataSource, "GiaXuatKho");
+
+            
+
             txt_donvitinh.DataBindings.Clear();
             txt_donvitinh.DataBindings.Add("Text", cb_tensp.DataSource, "DonViTinh");
-            textBox1.DataBindings.Clear();
-            textBox1.DataBindings.Add("Text", cb_tensp.DataSource, "SoLuong");
+
+            txt_slTon.DataBindings.Clear();
+            txt_slTon.DataBindings.Add("Text", cb_tensp.DataSource, "SoLuong");
             SqlDataAdapter dap2 = new SqlDataAdapter("SELECT * FROM HANG_HOA WHERE TenHang = N'"+cb_tensp.Text+"'", conn);
             DataTable table2 = new DataTable();
             dap2.Fill(table2);
@@ -131,11 +135,11 @@ namespace WindowsFormsApp3
             txt_masp.DataBindings.Clear();
             txt_masp.DataBindings.Add("Text", cb_tensp.DataSource, "MaHang");
             txt_dongia.DataBindings.Clear();
-            txt_dongia.DataBindings.Add("Text", cb_tensp.DataSource, "DonGia");
+            txt_dongia.DataBindings.Add("Text", cb_tensp.DataSource, "GiaXuatKho");
             txt_donvitinh.DataBindings.Clear();
             txt_donvitinh.DataBindings.Add("Text", cb_tensp.DataSource, "DonViTinh");
-            textBox1.DataBindings.Clear();
-            textBox1.DataBindings.Add("Text", cb_tensp.DataSource, "SoLuong");
+            txt_slTon.DataBindings.Clear();
+            txt_slTon.DataBindings.Add("Text", cb_tensp.DataSource, "SoLuong");
 
             SqlDataAdapter dap2 = new SqlDataAdapter("SELECT * FROM HANG_HOA WHERE TenHang = N'" + cb_tensp.Text + "'", conn);
             DataTable table2 = new DataTable();
@@ -185,13 +189,20 @@ namespace WindowsFormsApp3
 
         private void bt_them_Click(object sender, EventArgs e)
         {
+            int slTon = Convert.ToInt32(txt_slTon.Text);
+            if(nbu_slXuat.Value > slTon)
+            {
+                MessageBox.Show("Hàng Không Đủ");
+                return;
+            }
             if (check_dk())
             {
-                double thanhtien = 0, sl, dongia;
-                sl = Convert.ToDouble(numericUpDown1.Value.ToString());
+                double sl, dongia;
+                sl = Convert.ToDouble(nbu_slXuat.Value.ToString());
                 dongia = Convert.ToDouble(txt_dongia.Text);
                 thanhtien = sl * dongia;
-                dgv_xuatkho.Rows.Add(cb_tensp.Text,txt_masp.Text, cb_nhacc.Text, numericUpDown1.Value.ToString(), txt_dongia.Text, thanhtien.ToString());
+                tong_tien = tong_tien + thanhtien;
+                dgv_xuatkho.Rows.Add(cb_tensp.Text,txt_masp.Text, cb_nhacc.Text, nbu_slXuat.Value.ToString(), txt_dongia.Text, thanhtien.ToString());
 
             }
             else
@@ -234,11 +245,12 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            tong_tien = 0;
             if(conn.State == ConnectionState.Closed)
             {
                 conn.Open();
             }
-            
+            double tongtien = 0;
             if (dgv_xuatkho.Rows.Count == 0 )
             {
                 MessageBox.Show("Không Có Dữ Liệu");
@@ -247,7 +259,7 @@ namespace WindowsFormsApp3
             try
             {
                 
-                string maphieu, mahang, soluong, dongia,sql;
+                string maphieu, mahang, soluong, dongia;
                 maphieu = txt_masophieu.Text;
 
                 for (int i = 0; i < dgv_xuatkho.Rows.Count; i++)
@@ -255,9 +267,9 @@ namespace WindowsFormsApp3
                     mahang = dgv_xuatkho.Rows[i].Cells["MaHang"].Value.ToString();
                     soluong = dgv_xuatkho.Rows[i].Cells["SoLuong"].Value.ToString();
                     dongia = dgv_xuatkho.Rows[i].Cells["DonGia"].Value.ToString();
-
-                    sql = "INSERT INTO CHI_TIET_XUAT VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
-                    comm = new SqlCommand(sql, conn);
+                    
+                    string sql1 = "INSERT INTO CHI_TIET_XUAT VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
+                    comm = new SqlCommand(sql1, conn);
                     comm.ExecuteNonQuery();
                     MessageBox.Show("Xuất Kho Thành Công");
 
@@ -268,7 +280,7 @@ namespace WindowsFormsApp3
 
                 throw;
             }
-            txt_masophieu.Text = "";
+           
 
             groupBox1.Enabled = true;
             gb_ttsp.Enabled = false;
@@ -279,11 +291,20 @@ namespace WindowsFormsApp3
             bt_lap_phieu.Enabled = true;
             dgv_xuatkho.Rows.Clear();
             dgv_xuatkho.Refresh();
+            string sql = "SELECT SUM( SoLuong *DonGia) FROM dbo.CHI_TIET_XUAT WHERE MaPhieu = '"+txt_masophieu.Text+"'";
+            SqlDataAdapter dap = new SqlDataAdapter(sql, conn);
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            
+            txt_ThanhTien.Text = table.Rows[0][0].ToString();
+           
+            txt_masophieu.Text = "";
             conn.Close();
         }
 
         private void bt_huy_phieu_Click(object sender, EventArgs e)
         {
+            tong_tien = 0;
             groupBox1.Enabled = true;
             bt_lap_phieu.Enabled = true;
             gb_ttsp.Enabled = false;
@@ -304,6 +325,7 @@ namespace WindowsFormsApp3
             {
                 conn.Open();
             }
+            tong_tien = 0;
             DateTime ngayhientai = DateTime.Today;
             int ngay, thang, nam;
             ngay = ngayhientai.Day;

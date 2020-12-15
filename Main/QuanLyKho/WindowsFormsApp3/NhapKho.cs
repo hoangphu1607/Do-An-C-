@@ -215,7 +215,7 @@ namespace WindowsFormsApp3
                     string sql = "INSERT INTO CHI_TIET_NHAP VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
                     comm = new SqlCommand(sql, conn);
                     comm.ExecuteNonQuery();
-
+                    double giaxuatkho = Convert.ToDouble(dongia) + 2000;
                     sql = "UPDATE dbo.HANG_HOA SET DonGia = '"+dongia+"' WHERE MaHang = '"+mahang+"'";
                     comm = new SqlCommand(sql, conn);
                     comm.ExecuteNonQuery();

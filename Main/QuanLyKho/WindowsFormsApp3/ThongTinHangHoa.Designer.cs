@@ -44,6 +44,7 @@
             this.MaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaXuatKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HangHoa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,8 @@
             this.DonViTinh,
             this.MaNhaCungCap,
             this.SoLuong,
-            this.DonGia});
+            this.DonGia,
+            this.GiaXuatKho});
             this.dgv_HangHoa.Location = new System.Drawing.Point(319, 144);
             this.dgv_HangHoa.Name = "dgv_HangHoa";
             this.dgv_HangHoa.RowHeadersVisible = false;
@@ -130,6 +132,12 @@
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
             // 
+            // GiaXuatKho
+            // 
+            this.GiaXuatKho.DataPropertyName = "GiaXuatKho";
+            this.GiaXuatKho.HeaderText = "Giá Bán";
+            this.GiaXuatKho.Name = "GiaXuatKho";
+            // 
             // ThongTinHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,5 +162,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaXuatKho;
     }
 }

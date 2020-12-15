@@ -51,6 +51,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "ThongKe_HangTrongKho";
             this.Text = "ThongKe_HangTrongKho";
+            this.Load += new System.EventHandler(this.ThongKe_HangTrongKho_Load);
             this.ResumeLayout(false);
 
         }

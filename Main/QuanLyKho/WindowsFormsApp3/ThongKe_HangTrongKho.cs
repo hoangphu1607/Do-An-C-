@@ -22,6 +22,11 @@ namespace WindowsFormsApp3
         SqlCommand comm;
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ThongKe_HangTrongKho_Load(object sender, EventArgs e)
+        {
             conn.Open();
             if (conn.State == ConnectionState.Open)
             {

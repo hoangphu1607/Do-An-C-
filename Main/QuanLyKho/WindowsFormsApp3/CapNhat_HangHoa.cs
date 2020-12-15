@@ -47,6 +47,7 @@ namespace WindowsFormsApp3
                 txt_dongia.Text = dgv_HangHoa.Rows[numrow].Cells[6].Value.ToString();
                 txt_mancc.Text = dgv_HangHoa.Rows[numrow].Cells[4].Value.ToString();
                 txt_soLuong.Text = dgv_HangHoa.Rows[numrow].Cells[5].Value.ToString();
+                txt_giaban.Text = dgv_HangHoa.Rows[numrow].Cells[7].Value.ToString();
             }
         }
 
@@ -63,7 +64,7 @@ namespace WindowsFormsApp3
         private void bt_sua_Click(object sender, EventArgs e)
         {
             conn.Open();
-            sql = "UPDATE HANG_HOA set TenHang = N'"+txt_tensp.Text+"', DonGia = '"+txt_dongia.Text+"', DonViTinh = N'"+txt_donvitinh.Text+"', SoLuong = '"+txt_soLuong.Text+"' where mahang = '"+txt_masp.Text+"'";
+            sql = "UPDATE HANG_HOA set TenHang = N'"+txt_tensp.Text+"', DonGia = '"+txt_dongia.Text+"', DonViTinh = N'"+txt_donvitinh.Text+"', SoLuong = '"+txt_soLuong.Text+"', GiaXuatKho = '"+txt_giaban.Text+"' where mahang = '"+txt_masp.Text+"'";
             comm = new SqlCommand(sql,conn);
             comm.ExecuteNonQuery();
             this.loadData();
@@ -97,6 +98,11 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Không Thể Xóa");
             }
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

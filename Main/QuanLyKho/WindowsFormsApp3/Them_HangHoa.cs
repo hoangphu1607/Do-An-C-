@@ -75,11 +75,11 @@ namespace WindowsFormsApp3
             }
             string sql;
 
-            sql = "INSERT INTO HANG_HOA  VALUES  ('"+txt_masp.Text+"',N'"+txt_tensp.Text+"',N'"+txt_donvitinh.Text+"','"+txt_nhomhang.Text+"','"+txt_mancc.Text+"','0','"+txt_dongia.Text+"')";
+            sql = "INSERT INTO dbo.HANG_HOA( MaHang ,TenHang ,DonViTinh ,MaNhomHang ,MaNhaCungCap ,SoLuong ,DonGia)  VALUES  ('" + txt_masp.Text+"',N'"+txt_tensp.Text+"',N'"+txt_donvitinh.Text+"','"+txt_nhomhang.Text+"','"+txt_mancc.Text+"','0','"+txt_dongia.Text+"')";
             comm = new SqlCommand(sql, conn);
             comm.ExecuteNonQuery();
 
-            sql = "UPDATE MaMoiNhat SET MaHang = '"+txt_masp.Text+"' ";
+            sql = "UPDATE MaMoiNhat SET MaHang = '"+txt_masp.Text+"'";
             comm = new SqlCommand(sql, conn);
             comm.ExecuteNonQuery();
             conn.Close();

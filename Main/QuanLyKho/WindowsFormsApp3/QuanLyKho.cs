@@ -148,5 +148,12 @@ namespace WindowsFormsApp3
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void xemHàngĐãXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hang_Da_Xuat_Kho FRM = new Hang_Da_Xuat_Kho();
+            FRM.MdiParent = this;
+            FRM.Show();
+        }
     }
 }

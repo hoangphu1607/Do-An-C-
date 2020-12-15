@@ -44,3 +44,4 @@ D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\stdole.dll
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ThongKe_HangTrongKho.resources
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Hang_Da_Xuat_Kho.resources

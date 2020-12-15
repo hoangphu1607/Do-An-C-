@@ -43,6 +43,7 @@
             this.cb_nhacungcap = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lb_spmoi = new System.Windows.Forms.LinkLabel();
             this.nbu_sl = new System.Windows.Forms.NumericUpDown();
             this.txt_donvitinh = new System.Windows.Forms.TextBox();
@@ -63,7 +64,6 @@
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bt_hoan_thanh = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbu_sl)).BeginInit();
@@ -239,6 +239,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sản phẩm";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(289, 82);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(69, 20);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Làm Mới";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // lb_spmoi
             // 
             this.lb_spmoi.AutoSize = true;
@@ -258,9 +269,19 @@
             23,
             0,
             0});
+            this.nbu_sl.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nbu_sl.Name = "nbu_sl";
             this.nbu_sl.Size = new System.Drawing.Size(64, 26);
             this.nbu_sl.TabIndex = 15;
+            this.nbu_sl.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nbu_sl.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // txt_donvitinh
@@ -424,17 +445,6 @@
             this.bt_hoan_thanh.Text = "Hoàn Thành";
             this.bt_hoan_thanh.UseVisualStyleBackColor = true;
             this.bt_hoan_thanh.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(289, 82);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 20);
-            this.linkLabel1.TabIndex = 17;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Làm Mới";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // NhapKho
             // 

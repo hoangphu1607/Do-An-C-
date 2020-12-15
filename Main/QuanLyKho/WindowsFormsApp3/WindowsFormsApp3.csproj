@@ -78,6 +78,12 @@
       <DependentUpon>CapNhat_NhomHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="Hang_Da_Xuat_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hang_Da_Xuat_Kho.Designer.cs">
+      <DependentUpon>Hang_Da_Xuat_Kho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hang_Ton_Kho.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhat_NhomHang.resx">
       <DependentUpon>CapNhat_NhomHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hang_Da_Xuat_Kho.resx">
+      <DependentUpon>Hang_Da_Xuat_Kho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hang_Ton_Kho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

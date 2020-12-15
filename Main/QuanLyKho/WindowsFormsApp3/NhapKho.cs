@@ -87,6 +87,11 @@ namespace WindowsFormsApp3
 
         public bool check_dk()
         {
+            if (nbu_sl.Value.ToString().Equals("0"))
+            {
+                return false;
+            }
+            //cot dau tien nhap vao luon la dung
             if (dgv_NhapHang.Rows.Count == 0)
                 return true;
             else
@@ -145,7 +150,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                MessageBox.Show("Dữ Liệu Bạn Chọn Bị Trùng");
+                MessageBox.Show("Dữ Liệu Bạn Chọn Bị Trùng Hoặc Số Lượng Bằng 0");
                 return;
             }    
         }
@@ -211,6 +216,9 @@ namespace WindowsFormsApp3
                     comm = new SqlCommand(sql, conn);
                     comm.ExecuteNonQuery();
 
+                    sql = "UPDATE dbo.HANG_HOA SET DonGia = '"+dongia+"' WHERE MaHang = '"+mahang+"'";
+                    comm = new SqlCommand(sql, conn);
+                    comm.ExecuteNonQuery();
                 }
                 tinh_trang = 0;
                 if(tinh_trang == 0)
@@ -297,7 +305,15 @@ namespace WindowsFormsApp3
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (conn.State == ConnectionState.Closed) {
+            if (txt_masophieu.Text == "")
+            {
+                MessageBox.Show("Mã Phiếu Không Tồn Tại");
+                return;
+            }
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
                 DateTime ngayhientai = DateTime.Today;
                 int ngay, thang, nam;
                 ngay = ngayhientai.Day;
@@ -326,7 +342,7 @@ namespace WindowsFormsApp3
                     MessageBox.Show("Ngày Không Hợp Lệ");
                     return;
                 }
-                conn.Open();
+                
                 try
                 {
                     string sql = "Insert into  PHIEU_NHAP VALUES ('" + txt_masophieu.Text + "','" + dateTimePicker1.Text + "','" + txt_manv.Text + "')";
@@ -359,11 +375,22 @@ namespace WindowsFormsApp3
                     bt_hoan_thanh.Enabled = true;
                     bt_huy_phieu.Enabled = true;
                 }
-            }
-            else
-            {
-                MessageBox.Show("Không Thể Kết Nối Đến Dữ Liệu");
-            }
+            conn.Close();
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM HANG_HOA", conn);
+            //DataSet ds = new DataSet();
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            cb_tensp.DataSource = table;
+            cb_tensp.DisplayMember = "TenHang";
+            cb_tensp.ValueMember = "MaHang";
+            conn.Close();
         }
 
         private void bt_huy_phieu_Click(object sender, EventArgs e)

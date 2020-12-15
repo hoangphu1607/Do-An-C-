@@ -63,6 +63,7 @@
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bt_hoan_thanh = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbu_sl)).BeginInit();
@@ -216,6 +217,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.linkLabel1);
             this.groupBox2.Controls.Add(this.lb_spmoi);
             this.groupBox2.Controls.Add(this.nbu_sl);
             this.groupBox2.Controls.Add(this.txt_donvitinh);
@@ -240,7 +242,7 @@
             // lb_spmoi
             // 
             this.lb_spmoi.AutoSize = true;
-            this.lb_spmoi.Location = new System.Drawing.Point(187, 82);
+            this.lb_spmoi.Location = new System.Drawing.Point(53, 82);
             this.lb_spmoi.Name = "lb_spmoi";
             this.lb_spmoi.Size = new System.Drawing.Size(156, 20);
             this.lb_spmoi.TabIndex = 16;
@@ -423,8 +425,20 @@
             this.bt_hoan_thanh.UseVisualStyleBackColor = true;
             this.bt_hoan_thanh.Click += new System.EventHandler(this.button1_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(289, 82);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(69, 20);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Làm Mới";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // NhapKho
             // 
+            this.AcceptButton = this.bt_hoan_thanh;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1668, 925);
@@ -485,5 +499,6 @@
         private System.Windows.Forms.LinkLabel lb_spmoi;
         private System.Windows.Forms.Button bt_huy_phieu;
         private System.Windows.Forms.Button bt_lap_phieu;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

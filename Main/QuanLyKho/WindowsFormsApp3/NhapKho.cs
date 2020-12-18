@@ -194,6 +194,11 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult result = new DialogResult();
+            XacNhan frm = new XacNhan();
+            result = frm.ShowDialog();
+            if (result == DialogResult.Cancel)
+                return;
             if(conn.State ==ConnectionState.Closed)
                 conn.Open();
             if(dgv_NhapHang.Rows.Count == 0 || tinh_trang==0)
@@ -215,10 +220,30 @@ namespace WindowsFormsApp3
                     string sql = "INSERT INTO CHI_TIET_NHAP VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
                     comm = new SqlCommand(sql, conn);
                     comm.ExecuteNonQuery();
-                    double giaxuatkho = Convert.ToDouble(dongia) + 2000;
-                    sql = "UPDATE dbo.HANG_HOA SET DonGia = '"+dongia+"' WHERE MaHang = '"+mahang+"'";
-                    comm = new SqlCommand(sql, conn);
-                    comm.ExecuteNonQuery();
+                    
+
+                    sql = "SELECT DonGia FROM dbo.HANG_HOA WHERE MaHang = '"+mahang+"'";
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(sql,conn);
+                    DataTable table = new DataTable();
+                    dataAdapter.Fill(table);
+
+                    double dongiatrongkho = Convert.ToDouble(table.Rows[0][0].ToString());
+                    double dongianhap = Convert.ToDouble(dongia);
+                    if (dongianhap > dongiatrongkho)
+                    {
+                        double giaxuatkho = dongianhap + dongianhap*10 / 100;
+                        sql = "UPDATE dbo.HANG_HOA SET DonGia = '" + dongia + "', GiaXuatKho = '"+giaxuatkho.ToString()+"' WHERE MaHang = '" + mahang + "'";
+                        comm = new SqlCommand(sql, conn);
+                        comm.ExecuteNonQuery();
+                    }
+                    else if(dongiatrongkho - dongianhap >= dongiatrongkho*10/100)
+                    {
+                        double giaxuatkho = dongianhap + dongianhap * 10 / 100;
+                        sql = "UPDATE dbo.HANG_HOA SET DonGia = '" + dongia + "', GiaXuatKho = '" + giaxuatkho.ToString() + "' WHERE MaHang = '" + mahang + "'";
+                        comm = new SqlCommand(sql, conn);
+                        comm.ExecuteNonQuery();
+                    }
+                    
                 }
                 tinh_trang = 0;
                 if(tinh_trang == 0)
@@ -234,7 +259,7 @@ namespace WindowsFormsApp3
                     cb_tennv.Enabled = true;
                     txt_masophieu.Clear();
                 }
-                MessageBox.Show("Hàng Hóa Vào Kho Thành Công");
+                
 
                 dgv_NhapHang.Rows.Clear();
                 dgv_NhapHang.Refresh();
@@ -242,10 +267,10 @@ namespace WindowsFormsApp3
             catch
             {
                 
-                //MessageBox.Show("Thêm Dữ Liệu Thất Bại!!!");
-            }            
+                MessageBox.Show("Thêm Dữ Liệu Thất Bại!!!");
+            }
 
-
+            MessageBox.Show("Hàng Nhập Vào Thành Công");
 
 
             conn.Close();

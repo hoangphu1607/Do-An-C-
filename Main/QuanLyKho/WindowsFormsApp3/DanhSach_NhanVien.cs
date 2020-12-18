@@ -33,5 +33,11 @@ namespace WindowsFormsApp3
             dgv_nhanvien.DataSource = table;
             conn.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BaoCao_NhanVien frm = new BaoCao_NhanVien();
+            frm.Show();
+        }
     }
 }

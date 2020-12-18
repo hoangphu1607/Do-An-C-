@@ -28,8 +28,7 @@ namespace WindowsFormsApp3
         private void ThongKe_HangTrongKho_Load(object sender, EventArgs e)
         {
             conn.Open();
-            if (conn.State == ConnectionState.Open)
-            {
+            
                 Hang_Ton_Kho rp = new Hang_Ton_Kho();
                 SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM HANG_HOA", conn);
                 //string sql = "select * from Hang_Hoa";
@@ -37,11 +36,7 @@ namespace WindowsFormsApp3
                 dap.Fill(table);
                 rp.SetDataSource(table);
                 crystalReportViewer1.ReportSource = rp;
-            }
-            else
-            {
-                MessageBox.Show("Không thể kết nối CSDL");
-            }
+            
             conn.Close();
         }
     }

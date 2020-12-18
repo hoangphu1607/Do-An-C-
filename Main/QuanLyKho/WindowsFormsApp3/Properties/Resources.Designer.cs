@@ -63,9 +63,39 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1228c58b032f61bb61a3d2f4e8d6d1fb {
+            get {
+                object obj = ResourceManager.GetObject("1228c58b032f61bb61a3d2f4e8d6d1fb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1451940037_canh_bao {
+            get {
+                object obj = ResourceManager.GetObject("1451940037_canh-bao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap daucong {
             get {
                 object obj = ResourceManager.GetObject("daucong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap T6_U10_9ieodk_Vector_Giao_Duc_021 {
+            get {
+                object obj = ResourceManager.GetObject("T6-U10-9ieodk-Vector-Giao-Duc-021", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

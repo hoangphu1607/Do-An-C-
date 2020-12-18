@@ -459,8 +459,8 @@
             this.Controls.Add(this.bt_xoa);
             this.Controls.Add(this.bt_them);
             this.Name = "NhapKho";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = " n";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nhập Kho";
             this.Load += new System.EventHandler(this.NhapKho_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

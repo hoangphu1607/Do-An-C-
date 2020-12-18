@@ -45,3 +45,8 @@ D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\bin\Debug\CrystalDecisions.
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ThongKe_HangTrongKho.resources
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
 D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Hang_Da_Xuat_Kho.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Hang_Nhap_Kho.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.BaoCao_HangNhap.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.BaoCao_XuatHang.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.XacNhan.resources
+D:\C#\Do an\Do-An-C-\Main\QuanLyKho\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.BaoCao_NhanVien.resources

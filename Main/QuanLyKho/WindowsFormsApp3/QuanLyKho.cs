@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
-
+        public static string quyen;
         private void QuanLyKho_FormClosing(object sender, FormClosingEventArgs e)
         {
            // Application.
@@ -37,7 +37,22 @@ namespace WindowsFormsApp3
 
         private void QuanLyKho_Load(object sender, EventArgs e)
         {
-           
+            if (quyen.Equals("1"))
+            {
+                ThongTinHangHoa.Visible = false;
+                NhanVien.Visible = false;                
+            }
+            else if (quyen.Equals("2"))
+            {
+
+            }
+            else
+            {
+                NhapHang.Visible = false;
+                XuatHang.Visible = false;
+                ThongTinHangHoa.Visible = false;
+
+            }
         }
 
         private void danhSáchKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,6 +169,26 @@ namespace WindowsFormsApp3
             Hang_Da_Xuat_Kho FRM = new Hang_Da_Xuat_Kho();
             FRM.MdiParent = this;
             FRM.Show();
+        }
+
+        private void xemHàngĐãNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hang_Nhap_Kho frm = new Hang_Nhap_Kho();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            DangNhap frm = new DangNhap();
+            frm.ShowDialog();
+
         }
     }
 }

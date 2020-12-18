@@ -25,7 +25,8 @@ namespace WindowsFormsApp3
         string sql = "";
         private void CapNhat_HangHoa_Load(object sender, EventArgs e)
         {
-            conn.Open();
+            if(conn.State == ConnectionState.Closed)
+                conn.Open();
             SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM HANG_HOA", conn);
             DataTable table = new DataTable();
             dap.Fill(table);
@@ -63,7 +64,16 @@ namespace WindowsFormsApp3
 
         private void bt_sua_Click(object sender, EventArgs e)
         {
-            conn.Open();
+            if(conn.State == ConnectionState.Closed)
+                conn.Open();
+            double dongia, giaxuatkho;
+            dongia = Convert.ToDouble(txt_dongia.Text);
+            giaxuatkho = Convert.ToDouble(txt_giaban.Text);
+            if(giaxuatkho < dongia)
+            {
+                MessageBox.Show("Giá Bán Nhỏ Hơn Giá Nhập");
+                return;
+            }
             sql = "UPDATE HANG_HOA set TenHang = N'"+txt_tensp.Text+"', DonGia = '"+txt_dongia.Text+"', DonViTinh = N'"+txt_donvitinh.Text+"', SoLuong = '"+txt_soLuong.Text+"', GiaXuatKho = '"+txt_giaban.Text+"' where mahang = '"+txt_masp.Text+"'";
             comm = new SqlCommand(sql,conn);
             comm.ExecuteNonQuery();
@@ -85,7 +95,8 @@ namespace WindowsFormsApp3
         {
             try
             {
-                conn.Open();
+                if(conn.State == ConnectionState.Closed)
+                    conn.Open();
                 sql = "DELETE FROM HANG_HOA WHERE MaHang = '" + txt_masp.Text + "'";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();

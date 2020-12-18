@@ -243,8 +243,24 @@ namespace WindowsFormsApp3
             conn.Close();
         }
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            dgv_xuatkho.Rows.Clear();
+            dgv_xuatkho.Refresh();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult result = new DialogResult();
+            XacNhan frm = new XacNhan();
+            result = frm.ShowDialog();
+            if (result == DialogResult.Cancel)
+                return;
             tong_tien = 0;
             if(conn.State == ConnectionState.Closed)
             {
@@ -271,9 +287,10 @@ namespace WindowsFormsApp3
                     string sql1 = "INSERT INTO CHI_TIET_XUAT VALUES ('" + maphieu + "', '" + mahang + "', '" + soluong + "','" + dongia + "')";
                     comm = new SqlCommand(sql1, conn);
                     comm.ExecuteNonQuery();
-                    MessageBox.Show("Xuất Kho Thành Công");
+                    
 
                 }
+                MessageBox.Show("Xuất Kho Thành Công");
             }
             catch (Exception)
             {
@@ -289,14 +306,15 @@ namespace WindowsFormsApp3
             bt_hoanThanh.Enabled = false;
             bt_huy_phieu.Enabled = false;
             bt_lap_phieu.Enabled = true;
-            dgv_xuatkho.Rows.Clear();
-            dgv_xuatkho.Refresh();
+            
             string sql = "SELECT SUM( SoLuong *DonGia) FROM dbo.CHI_TIET_XUAT WHERE MaPhieu = '"+txt_masophieu.Text+"'";
             SqlDataAdapter dap = new SqlDataAdapter(sql, conn);
             DataTable table = new DataTable();
             dap.Fill(table);
             
-            txt_ThanhTien.Text = table.Rows[0][0].ToString();
+            string tt = table.Rows[0][0].ToString();
+            double thanhtien = Convert.ToDouble(tt);
+            txt_ThanhTien.Text = thanhtien.ToString();
            
             txt_masophieu.Text = "";
             conn.Close();

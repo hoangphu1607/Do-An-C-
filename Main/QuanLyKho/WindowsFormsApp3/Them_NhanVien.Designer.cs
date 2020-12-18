@@ -180,6 +180,7 @@
             this.txt_sdt.Name = "txt_sdt";
             this.txt_sdt.Size = new System.Drawing.Size(145, 26);
             this.txt_sdt.TabIndex = 5;
+            this.txt_sdt.TextChanged += new System.EventHandler(this.txt_sdt_TextChanged);
             // 
             // label3
             // 

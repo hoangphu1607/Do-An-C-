@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_ = new System.Windows.Forms.GroupBox();
             this.cbb_diachi = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,19 +51,10 @@
             this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label11 = new System.Windows.Forms.Label();
             this.txt_.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhanvien)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(626, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(435, 55);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "THÊM NHÂN VIÊN";
             // 
             // txt_
             // 
@@ -264,21 +259,31 @@
             this.dgv_nhanvien.AllowUserToDeleteRows = false;
             this.dgv_nhanvien.AllowUserToResizeColumns = false;
             this.dgv_nhanvien.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_nhanvien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_nhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNhanVien,
             this.TenNhanVien,
             this.DiaChi,
             this.DienThoai});
-            this.dgv_nhanvien.Location = new System.Drawing.Point(449, 409);
+            this.dgv_nhanvien.Location = new System.Drawing.Point(440, 414);
             this.dgv_nhanvien.Name = "dgv_nhanvien";
-            this.dgv_nhanvien.Size = new System.Drawing.Size(832, 591);
+            this.dgv_nhanvien.Size = new System.Drawing.Size(841, 493);
             this.dgv_nhanvien.TabIndex = 10;
             this.dgv_nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_nhanvien_CellClick);
             // 
             // MaNhanVien
             // 
             this.MaNhanVien.DataPropertyName = "MaNhanVien";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaNhanVien.DefaultCellStyle = dataGridViewCellStyle7;
             this.MaNhanVien.Frozen = true;
             this.MaNhanVien.HeaderText = "ID";
             this.MaNhanVien.Name = "MaNhanVien";
@@ -288,6 +293,8 @@
             // TenNhanVien
             // 
             this.TenNhanVien.DataPropertyName = "TenNhanVien";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenNhanVien.DefaultCellStyle = dataGridViewCellStyle8;
             this.TenNhanVien.Frozen = true;
             this.TenNhanVien.HeaderText = "Tên Nhân Viên";
             this.TenNhanVien.Name = "TenNhanVien";
@@ -297,6 +304,8 @@
             // DiaChi
             // 
             this.DiaChi.DataPropertyName = "DiaChi";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle9;
             this.DiaChi.Frozen = true;
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.Name = "DiaChi";
@@ -306,25 +315,41 @@
             // DienThoai
             // 
             this.DienThoai.DataPropertyName = "DienThoai";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle10;
             this.DienThoai.Frozen = true;
             this.DienThoai.HeaderText = "Số Điện Thoại";
             this.DienThoai.Name = "DienThoai";
             this.DienThoai.ReadOnly = true;
             this.DienThoai.Width = 200;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(629, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(437, 46);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "THÊM HÀNG HÓA MỚI";
+            // 
             // Them_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1674, 933);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.dgv_nhanvien);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_);
             this.Name = "Them_NhanVien";
-            this.Text = "Them_NhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "THÊM NHÂN VIÊN";
             this.Load += new System.EventHandler(this.Them_NhanVien_Load);
             this.txt_.ResumeLayout(false);
             this.txt_.PerformLayout();
@@ -335,8 +360,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox txt_;
         private System.Windows.Forms.ComboBox cbb_diachi;
         private System.Windows.Forms.Button button3;
@@ -355,5 +378,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
+        private System.Windows.Forms.Label label11;
     }
 }

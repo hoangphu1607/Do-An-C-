@@ -71,6 +71,7 @@
             this.bt_huy_phieu = new System.Windows.Forms.Button();
             this.bt_lap_phieu = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lb_giamgia = new System.Windows.Forms.Label();
             this.txt_ThanhTien = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -416,9 +417,9 @@
             this.label12.Location = new System.Drawing.Point(577, 12);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(151, 36);
+            this.label12.Size = new System.Drawing.Size(188, 36);
             this.label12.TabIndex = 3;
-            this.label12.Text = "Xuất Kho";
+            this.label12.Text = "XUẤT KHO";
             // 
             // dgv_xuatkho
             // 
@@ -515,15 +516,24 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lb_giamgia);
             this.groupBox2.Controls.Add(this.txt_ThanhTien);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(1347, 75);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(306, 226);
+            this.groupBox2.Size = new System.Drawing.Size(306, 252);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TỔNG TIỀN";
+            // 
+            // lb_giamgia
+            // 
+            this.lb_giamgia.AutoSize = true;
+            this.lb_giamgia.Location = new System.Drawing.Point(56, 209);
+            this.lb_giamgia.Name = "lb_giamgia";
+            this.lb_giamgia.Size = new System.Drawing.Size(0, 22);
+            this.lb_giamgia.TabIndex = 2;
             // 
             // txt_ThanhTien
             // 
@@ -563,6 +573,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1677, 931);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
@@ -577,6 +588,7 @@
             this.Controls.Add(this.bt_xoa);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "xuatkho";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xuất Kho";
             this.Load += new System.EventHandler(this.xuatkho_Load);
             this.groupBox1.ResumeLayout(false);
@@ -640,5 +652,6 @@
         private System.Windows.Forms.TextBox txt_ThanhTien;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lb_giamgia;
     }
 }

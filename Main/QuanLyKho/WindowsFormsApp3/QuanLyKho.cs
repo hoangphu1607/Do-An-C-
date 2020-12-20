@@ -40,7 +40,12 @@ namespace WindowsFormsApp3
             if (quyen.Equals("1"))
             {
                 ThongTinHangHoa.Visible = false;
-                NhanVien.Visible = false;                
+                NhanVien.Visible = false;
+                mn_dskh.Visible = false;
+                mn_cnkh.Visible = false;
+                mn_baocao.Visible = false;
+                mn_xemHangNhap.Visible = false;
+                mn_XemHangXuat.Visible = false;
             }
             else if (quyen.Equals("2"))
             {

@@ -330,6 +330,8 @@ namespace WindowsFormsApp3
 
         private void button4_Click(object sender, EventArgs e)
         {
+            dgv_NhapHang.Rows.Clear();
+            dgv_NhapHang.Refresh();
             if (txt_masophieu.Text == "")
             {
                 MessageBox.Show("Mã Phiếu Không Tồn Tại");
@@ -357,7 +359,7 @@ namespace WindowsFormsApp3
                     {
                         if (ngay - ngay1 < 7 && ngay - ngay1 >= 0)
                         {
-                            MessageBox.Show("Hợp Lệ");
+                            
                             checkday = true;
                         }
                     }

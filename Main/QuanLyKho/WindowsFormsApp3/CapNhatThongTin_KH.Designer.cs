@@ -30,6 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_khachhang = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaikh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_makh = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,11 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaikh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_khachhang)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -81,6 +81,40 @@
             this.dgv_khachhang.TabIndex = 3;
             this.dgv_khachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_khachhang_CellClick);
             this.dgv_khachhang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_khachhang_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaKhachHang";
+            this.Column1.HeaderText = "Mã Khách Hàng";
+            this.Column1.Name = "Column1";
+            // 
+            // TenKhach
+            // 
+            this.TenKhach.DataPropertyName = "TenKhach";
+            this.TenKhach.HeaderText = "Tên Khách Hàng";
+            this.TenKhach.Name = "TenKhach";
+            this.TenKhach.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số Điện Thoại";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "Diachi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // loaikh
+            // 
+            this.loaikh.DataPropertyName = "LoaiKH";
+            this.loaikh.HeaderText = "Loại Khách Hàng";
+            this.loaikh.Name = "loaikh";
+            this.loaikh.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -276,40 +310,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaKhachHang";
-            this.Column1.HeaderText = "Mã Khách Hàng";
-            this.Column1.Name = "Column1";
-            // 
-            // TenKhach
-            // 
-            this.TenKhach.DataPropertyName = "TenKhach";
-            this.TenKhach.HeaderText = "Tên Khách Hàng";
-            this.TenKhach.Name = "TenKhach";
-            this.TenKhach.ReadOnly = true;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số Điện Thoại";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "Diachi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            // 
-            // loaikh
-            // 
-            this.loaikh.DataPropertyName = "LoaiKH";
-            this.loaikh.HeaderText = "Loại Khách Hàng";
-            this.loaikh.Name = "loaikh";
-            this.loaikh.ReadOnly = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -326,6 +326,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1677, 928);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -333,6 +334,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_khachhang);
             this.Name = "CapNhatThongTin_KH";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập Nhật Thông Tin Khách Hàng";
             this.Load += new System.EventHandler(this.CapNhatThongTin_KH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_khachhang)).EndInit();

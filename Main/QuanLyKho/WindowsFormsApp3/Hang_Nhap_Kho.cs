@@ -137,7 +137,7 @@ namespace WindowsFormsApp3
 
         private void bt_baocao_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(maphieu);
+           
             BaoCao_HangNhap.maphieu = maphieu;
             BaoCao_HangNhap frm = new BaoCao_HangNhap();
             frm.MdiParent = this.MdiParent;

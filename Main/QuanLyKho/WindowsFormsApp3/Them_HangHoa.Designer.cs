@@ -51,6 +51,7 @@
             this.txt_ = new System.Windows.Forms.GroupBox();
             this.lb_spmoi = new System.Windows.Forms.LinkLabel();
             this.bt_lammoi = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.txt_.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +72,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(221, 272);
+            this.groupBox2.Location = new System.Drawing.Point(221, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(832, 264);
             this.groupBox2.TabIndex = 12;
@@ -82,6 +83,7 @@
             // 
             this.button3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.daucong;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.Location = new System.Drawing.Point(765, 43);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(32, 29);
@@ -193,9 +195,10 @@
             // 
             // bt_them
             // 
+            this.bt_them.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_them.Location = new System.Drawing.Point(393, 576);
             this.bt_them.Name = "bt_them";
-            this.bt_them.Size = new System.Drawing.Size(75, 23);
+            this.bt_them.Size = new System.Drawing.Size(113, 38);
             this.bt_them.TabIndex = 13;
             this.bt_them.Text = "Thêm";
             this.bt_them.UseVisualStyleBackColor = true;
@@ -203,9 +206,11 @@
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(682, 576);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(113, 38);
             this.button1.TabIndex = 14;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = true;
@@ -276,32 +281,51 @@
             // 
             // bt_lammoi
             // 
-            this.bt_lammoi.Location = new System.Drawing.Point(553, 250);
+            this.bt_lammoi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_lammoi.Location = new System.Drawing.Point(551, 254);
             this.bt_lammoi.Name = "bt_lammoi";
-            this.bt_lammoi.Size = new System.Drawing.Size(103, 30);
+            this.bt_lammoi.Size = new System.Drawing.Size(108, 37);
             this.bt_lammoi.TabIndex = 18;
             this.bt_lammoi.Text = "Làm Mới";
             this.bt_lammoi.UseVisualStyleBackColor = true;
             this.bt_lammoi.Click += new System.EventHandler(this.bt_lammoi_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(474, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(437, 46);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "THÊM HÀNG HÓA MỚI";
+            // 
             // Them_HangHoa
             // 
+            this.AcceptButton = this.bt_them;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(1331, 652);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.bt_lammoi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.bt_them);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txt_);
             this.Name = "Them_HangHoa";
-            this.Text = "Them_HangHoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "THÊM HÀNG HÓA";
             this.Load += new System.EventHandler(this.Them_HangHoa_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.txt_.ResumeLayout(false);
             this.txt_.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -329,5 +353,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.LinkLabel lb_spmoi;
         private System.Windows.Forms.Button bt_lammoi;
+        private System.Windows.Forms.Label label11;
     }
 }

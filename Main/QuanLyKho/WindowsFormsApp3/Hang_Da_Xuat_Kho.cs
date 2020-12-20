@@ -79,8 +79,7 @@ namespace WindowsFormsApp3
                 if (thang - thang1 >= 0)
                 {
                     if (ngay - ngay1 >=0)
-                    {
-                        MessageBox.Show("Hợp Lệ");
+                    {                        
                         checkday = true;
                     }
                 }

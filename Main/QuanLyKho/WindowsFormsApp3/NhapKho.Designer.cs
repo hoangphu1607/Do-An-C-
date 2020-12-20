@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bt_huy_phieu = new System.Windows.Forms.Button();
             this.bt_lap_phieu = new System.Windows.Forms.Button();
@@ -64,6 +70,7 @@
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bt_hoan_thanh = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbu_sl)).BeginInit();
@@ -366,7 +373,7 @@
             // bt_xoa
             // 
             this.bt_xoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_xoa.Location = new System.Drawing.Point(802, 508);
+            this.bt_xoa.Location = new System.Drawing.Point(800, 508);
             this.bt_xoa.Name = "bt_xoa";
             this.bt_xoa.Size = new System.Drawing.Size(119, 40);
             this.bt_xoa.TabIndex = 8;
@@ -377,7 +384,7 @@
             // bt_them
             // 
             this.bt_them.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_them.Location = new System.Drawing.Point(531, 508);
+            this.bt_them.Location = new System.Drawing.Point(475, 508);
             this.bt_them.Name = "bt_them";
             this.bt_them.Size = new System.Drawing.Size(119, 40);
             this.bt_them.TabIndex = 6;
@@ -389,6 +396,14 @@
             // 
             this.dgv_NhapHang.AllowUserToAddRows = false;
             this.dgv_NhapHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_NhapHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_NhapHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_NhapHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenHang,
@@ -405,6 +420,8 @@
             // TenHang
             // 
             this.TenHang.DataPropertyName = "TenHang";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenHang.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenHang.HeaderText = "Tên Sản Phẩm";
             this.TenHang.Name = "TenHang";
             this.TenHang.ReadOnly = true;
@@ -412,18 +429,24 @@
             // MaHang
             // 
             this.MaHang.DataPropertyName = "MaHang";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHang.DefaultCellStyle = dataGridViewCellStyle3;
             this.MaHang.HeaderText = "Mã Hàng";
             this.MaHang.Name = "MaHang";
             // 
             // DonViTinh
             // 
             this.DonViTinh.DataPropertyName = "DonViTinh";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonViTinh.DefaultCellStyle = dataGridViewCellStyle4;
             this.DonViTinh.HeaderText = "Đơn Vị Tính";
             this.DonViTinh.Name = "DonViTinh";
             // 
             // SoLuong
             // 
             this.SoLuong.DataPropertyName = "SoLuong";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle5;
             this.SoLuong.HeaderText = "Số Lượng";
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.ReadOnly = true;
@@ -431,6 +454,8 @@
             // DonGia
             // 
             this.DonGia.DataPropertyName = "DonGia";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonGia.DefaultCellStyle = dataGridViewCellStyle6;
             this.DonGia.HeaderText = "Đơn Giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
@@ -438,7 +463,7 @@
             // bt_hoan_thanh
             // 
             this.bt_hoan_thanh.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_hoan_thanh.Location = new System.Drawing.Point(1232, 508);
+            this.bt_hoan_thanh.Location = new System.Drawing.Point(1091, 508);
             this.bt_hoan_thanh.Name = "bt_hoan_thanh";
             this.bt_hoan_thanh.Size = new System.Drawing.Size(119, 40);
             this.bt_hoan_thanh.TabIndex = 10;
@@ -446,12 +471,26 @@
             this.bt_hoan_thanh.UseVisualStyleBackColor = true;
             this.bt_hoan_thanh.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(718, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(222, 46);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "NHẬP KHO";
+            // 
             // NhapKho
             // 
             this.AcceptButton = this.bt_hoan_thanh;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1668, 925);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.bt_hoan_thanh);
             this.Controls.Add(this.dgv_NhapHang);
             this.Controls.Add(this.groupBox2);
@@ -469,6 +508,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nbu_sl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhapHang)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -501,14 +541,15 @@
         private System.Windows.Forms.DataGridView dgv_NhapHang;
         private System.Windows.Forms.Button bt_hoan_thanh;
         private System.Windows.Forms.Button bt_themPhieu;
+        private System.Windows.Forms.LinkLabel lb_spmoi;
+        private System.Windows.Forms.Button bt_huy_phieu;
+        private System.Windows.Forms.Button bt_lap_phieu;
+        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonViTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.LinkLabel lb_spmoi;
-        private System.Windows.Forms.Button bt_huy_phieu;
-        private System.Windows.Forms.Button bt_lap_phieu;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label11;
     }
 }

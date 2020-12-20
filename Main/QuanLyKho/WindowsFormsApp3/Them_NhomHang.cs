@@ -21,7 +21,16 @@ namespace WindowsFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            if(txt_manhom.Text.Equals(""))
+            {
+                MessageBox.Show("Mã Nhóm Không Được Trống");
+                return;
+            }
+            if (txt_tennhom.Text.Equals(""))
+            {
+                MessageBox.Show("Tên Nhóm Không Được Trống");
+                return;
+            }
             try
             {
                 conn.Open();

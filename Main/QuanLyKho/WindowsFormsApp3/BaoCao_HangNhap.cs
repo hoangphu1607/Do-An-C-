@@ -29,7 +29,8 @@ namespace WindowsFormsApp3
             DataTable table = new DataTable();
             dap.Fill(table);
             cry.SetDataSource(table);
-            crystalReportViewer1.ReportSource = cry;
+            crystalReportViewer1.ReportSource = cry;            
+
             conn.Close();
         }
     }

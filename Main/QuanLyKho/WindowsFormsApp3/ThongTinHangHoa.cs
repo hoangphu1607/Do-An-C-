@@ -32,5 +32,11 @@ namespace WindowsFormsApp3
             dgv_HangHoa.DataSource = table;
             conn.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ThongKe_HangTrongKho FRM = new ThongKe_HangTrongKho();
+            FRM.Show(); 
+        }
     }
 }

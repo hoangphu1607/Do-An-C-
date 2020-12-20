@@ -290,6 +290,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1676, 933);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
@@ -297,7 +298,8 @@
             this.Controls.Add(this.dgv_nhanvien);
             this.Controls.Add(this.txt_);
             this.Name = "CapNhat_NhanVien";
-            this.Text = "CapNhat_NhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CẬP NHẬT THÔNG TIN NHÂN VIÊN";
             this.Load += new System.EventHandler(this.CapNhat_NhanVien_Load);
             this.txt_.ResumeLayout(false);
             this.txt_.PerformLayout();

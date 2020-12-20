@@ -86,5 +86,10 @@ namespace WindowsFormsApp3
         {
             Application.Exit();
         }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

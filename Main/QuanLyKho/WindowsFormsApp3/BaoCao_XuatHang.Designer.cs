@@ -49,8 +49,8 @@
             this.ClientSize = new System.Drawing.Size(1330, 660);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "BaoCao_XuatHang";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "BaoCao_XuatHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BÁO CÁO XUẤT KHO";
             this.Load += new System.EventHandler(this.BaoCao_XuatHang_Load);
             this.ResumeLayout(false);
 

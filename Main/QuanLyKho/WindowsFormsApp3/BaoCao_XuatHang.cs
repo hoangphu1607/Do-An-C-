@@ -30,8 +30,20 @@ namespace WindowsFormsApp3
             SqlDataAdapter dap = new SqlDataAdapter("TT_XuatHang '"+maphieu+"'", conn);
             DataTable table = new DataTable();
             dap.Fill(table);
+            try
+            {
+                string loaiKH = table.Rows[0][16].ToString();
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            
+            //MessageBox.Show(loaiKH);
             cry.SetDataSource(table);
             crystalReportViewer1.ReportSource = cry;
+           
             conn.Close();
         }
     }

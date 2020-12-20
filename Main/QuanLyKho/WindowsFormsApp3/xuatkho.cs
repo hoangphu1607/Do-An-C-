@@ -252,6 +252,19 @@ namespace WindowsFormsApp3
         {
             dgv_xuatkho.Rows.Clear();
             dgv_xuatkho.Refresh();
+            lb_giamgia.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            //string sql = "SELECT LoaiKH FROM dbo.KHACH_HANG WHERE MaKhachHang = N'" + cb_tennv.ValueMember.ToString() + "'";
+            //SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            //DataTable dataTable = new DataTable();
+            //dataAdapter.Fill(dataTable);
+            //string loaiKH = dataTable.Rows[0][0].ToString();
+            //MessageBox.Show(txt_maKH.Text);
+            conn.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -310,10 +323,22 @@ namespace WindowsFormsApp3
             string sql = "SELECT SUM( SoLuong *DonGia) FROM dbo.CHI_TIET_XUAT WHERE MaPhieu = '"+txt_masophieu.Text+"'";
             SqlDataAdapter dap = new SqlDataAdapter(sql, conn);
             DataTable table = new DataTable();
-            dap.Fill(table);
-            
+            dap.Fill(table);            
             string tt = table.Rows[0][0].ToString();
+
+            sql = "SELECT LoaiKH FROM dbo.KHACH_HANG WHERE MaKhachHang = '" + txt_maKH.Text + "'";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            string loaiKH = dataTable.Rows[0][0].ToString();
             double thanhtien = Convert.ToDouble(tt);
+
+            if (loaiKH.Equals("Khách Hàng Thân Thiết"))
+            {
+                thanhtien = thanhtien * 98 / 100;
+                lb_giamgia.Text = "Đã Giảm 2%";
+            }
+
             txt_ThanhTien.Text = thanhtien.ToString();
            
             txt_masophieu.Text = "";
@@ -322,6 +347,7 @@ namespace WindowsFormsApp3
 
         private void bt_huy_phieu_Click(object sender, EventArgs e)
         {
+            lb_giamgia.Text = "";
             tong_tien = 0;
             groupBox1.Enabled = true;
             bt_lap_phieu.Enabled = true;
@@ -334,6 +360,9 @@ namespace WindowsFormsApp3
 
         private void bt_lap_phieu_Click(object sender, EventArgs e)
         {
+            lb_giamgia.Text = "";
+            dgv_xuatkho.Rows.Clear();
+            dgv_xuatkho.Refresh();
             if(txt_masophieu.Text == "")
             {
                 MessageBox.Show("Mã Phiếu Không Tồn Tại");

@@ -384,6 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1483, 835);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bt_xoa);
@@ -392,7 +393,7 @@
             this.Controls.Add(this.txt_);
             this.Controls.Add(this.dgv_HangHoa);
             this.Name = "CapNhat_HangHoa";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập Nhật Hàng Hóa";
             this.Load += new System.EventHandler(this.CapNhat_HangHoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HangHoa)).EndInit();

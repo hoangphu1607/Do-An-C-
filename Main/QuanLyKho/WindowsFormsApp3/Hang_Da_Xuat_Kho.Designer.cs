@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.dgv_Hang_Xuat = new System.Windows.Forms.DataGridView();
             this.MaSoPhieuXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayLapPhieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,20 +46,14 @@
             this.MaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Hang_Xuat)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_chitietxuat)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(629, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TÌM KIẾM";
             // 
             // dgv_Hang_Xuat
             // 
@@ -113,10 +106,10 @@
             // 
             this.cbb_MaPhieuXuat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_MaPhieuXuat.FormattingEnabled = true;
-            this.cbb_MaPhieuXuat.ItemHeight = 13;
-            this.cbb_MaPhieuXuat.Location = new System.Drawing.Point(24, 31);
+            this.cbb_MaPhieuXuat.ItemHeight = 21;
+            this.cbb_MaPhieuXuat.Location = new System.Drawing.Point(25, 44);
             this.cbb_MaPhieuXuat.Name = "cbb_MaPhieuXuat";
-            this.cbb_MaPhieuXuat.Size = new System.Drawing.Size(121, 21);
+            this.cbb_MaPhieuXuat.Size = new System.Drawing.Size(188, 29);
             this.cbb_MaPhieuXuat.TabIndex = 2;
             this.cbb_MaPhieuXuat.SelectedIndexChanged += new System.EventHandler(this.cbb_MaPhieuXuat_SelectedIndexChanged);
             // 
@@ -124,57 +117,59 @@
             // 
             this.dtb_ngaytim.CustomFormat = "MM-dd-yyyy";
             this.dtb_ngaytim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtb_ngaytim.Location = new System.Drawing.Point(24, 58);
+            this.dtb_ngaytim.Location = new System.Drawing.Point(36, 41);
             this.dtb_ngaytim.Name = "dtb_ngaytim";
-            this.dtb_ngaytim.Size = new System.Drawing.Size(139, 20);
+            this.dtb_ngaytim.Size = new System.Drawing.Size(139, 29);
             this.dtb_ngaytim.TabIndex = 3;
             this.dtb_ngaytim.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbb_MaPhieuXuat);
-            this.groupBox1.Controls.Add(this.dtb_ngaytim);
-            this.groupBox1.Location = new System.Drawing.Point(298, 92);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(140, 102);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(294, 100);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Tìm Kiếm Theo Đơn Hàng";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dt_ngaybt);
             this.groupBox2.Controls.Add(this.dt_ngaykt);
-            this.groupBox2.Location = new System.Drawing.Point(796, 70);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(780, 102);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.Size = new System.Drawing.Size(386, 100);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Tìm Kiếm Nhiều Ngày";
             // 
             // dt_ngaybt
             // 
             this.dt_ngaybt.CustomFormat = "MM-dd-yyyy";
             this.dt_ngaybt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_ngaybt.Location = new System.Drawing.Point(31, 21);
+            this.dt_ngaybt.Location = new System.Drawing.Point(19, 44);
             this.dt_ngaybt.Name = "dt_ngaybt";
-            this.dt_ngaybt.Size = new System.Drawing.Size(139, 20);
+            this.dt_ngaybt.Size = new System.Drawing.Size(139, 29);
             this.dt_ngaybt.TabIndex = 6;
             // 
             // dt_ngaykt
             // 
             this.dt_ngaykt.CustomFormat = "MM-dd-yyyy";
             this.dt_ngaykt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_ngaykt.Location = new System.Drawing.Point(31, 54);
+            this.dt_ngaykt.Location = new System.Drawing.Point(205, 44);
             this.dt_ngaykt.Name = "dt_ngaykt";
-            this.dt_ngaykt.Size = new System.Drawing.Size(139, 20);
+            this.dt_ngaykt.Size = new System.Drawing.Size(139, 29);
             this.dt_ngaykt.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(848, 176);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1172, 149);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(113, 38);
             this.button1.TabIndex = 6;
             this.button1.Text = "Tìm Kiếm";
             this.button1.UseVisualStyleBackColor = true;
@@ -182,9 +177,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1016, 176);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(937, 625);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 23);
+            this.button2.Size = new System.Drawing.Size(173, 37);
             this.button2.TabIndex = 7;
             this.button2.Text = "Xuất Báo Cáo";
             this.button2.UseVisualStyleBackColor = true;
@@ -236,33 +232,59 @@
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(531, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(203, 46);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "TÌM KIẾM";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dtb_ngaytim);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(503, 102);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tìm Kiếm Theo Ngày";
+            // 
             // Hang_Da_Xuat_Kho
             // 
+            this.AcceptButton = this.button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1287, 650);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1321, 674);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dgv_chitietxuat);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_Hang_Xuat);
-            this.Controls.Add(this.label1);
             this.Name = "Hang_Da_Xuat_Kho";
-            this.Text = "Hang_Da_Xuat_Kho";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Danh Sách Hàng Đã Xuất Kho";
             this.Load += new System.EventHandler(this.Hang_Da_Xuat_Kho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Hang_Xuat)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_chitietxuat)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_Hang_Xuat;
         private System.Windows.Forms.ComboBox cbb_MaPhieuXuat;
         private System.Windows.Forms.DateTimePicker dtb_ngaytim;
@@ -281,5 +303,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

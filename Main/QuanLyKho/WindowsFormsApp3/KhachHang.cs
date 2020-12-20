@@ -67,7 +67,7 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Tên Không Được Trống");
                 return;
             }  
-            if(txt_sdt.Text.Length != 10 || txt_sdt.Text.Equals(""))
+            if(txt_sdt.Text.Length >= 1 && txt_sdt.Text.Length <= 9 || txt_sdt.Text.Length > 10)
             {
                 MessageBox.Show("Số Điện Thoại Sai");
                 return;
@@ -135,6 +135,11 @@ namespace WindowsFormsApp3
         }
 
         private void dgv_khachhang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

@@ -62,13 +62,13 @@ namespace WindowsFormsApp3
                     MessageBox.Show("Số Điện Thoại Sai");
                     return;
                 }
-
-                conn.Open();
+                if(conn.State == ConnectionState.Closed)
+                    conn.Open();
                 sql = "UPDATE NHAN_VIEN SET DienThoai = '" + txt_sdt.Text + "', TenNhanVien = N'" +txt_tennv.Text +"', DiaChi = N'"+cbb_diachi.SelectedItem.ToString()+"' WHERE MaNhanVien = '" + txt_manv.Text + "';";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
 
-                
+                MessageBox.Show("Cập Nhật Thành Công");
 
                 
 
@@ -80,7 +80,8 @@ namespace WindowsFormsApp3
         }
         public void loadData()
         {
-            conn.Open();
+            if(conn.State == ConnectionState.Closed)
+                conn.Open();
             SqlDataAdapter dap = new SqlDataAdapter("SELECT * FROM NHAN_VIEN", conn);
             DataTable table = new DataTable();
             dap.Fill(table);
@@ -94,14 +95,53 @@ namespace WindowsFormsApp3
             if (!txt_manv.Text.Equals(""))
             {
                 conn.Open();
-                sql = "DELETE FROM NHAN_VIEN WHERE MaNhanVien = '" + txt_manv.Text + "';";
-                comm = new SqlCommand(sql, conn);
+
+                sql = "SELECT MaSoPhieuNhap FROM dbo.PHIEU_NHAP WHERE MaNhanVien='" + txt_manv.Text + "' GROUP BY MaSoPhieuNhap";
+                SqlDataAdapter dap = new SqlDataAdapter(sql,conn);
+                DataTable table = new DataTable();
+                dap.Fill(table);
+
+                
+                for(int i = 0; i < table.Rows.Count; i++)
+                {
+                    string maphieunhap = table.Rows[i][0].ToString();
+                    string xoa = "DELETE FROM dbo.CHI_TIET_NHAP WHERE MaPhieu = '" + maphieunhap + "'";
+                    comm = new SqlCommand(xoa, conn);
+                    comm.ExecuteNonQuery();
+                    xoa = "DELETE FROM dbo.PHIEU_NHAP WHERE MaSoPhieuNhap = '" + maphieunhap + "'";
+                    comm = new SqlCommand(xoa, conn);
+                    comm.ExecuteNonQuery();                
+
+                }
+
+                sql = "SELECT MaSoPhieuXuat FROM dbo.PHIEU_XUAT WHERE MaNhanVien ='"+txt_manv.Text+"' GROUP BY MaSoPhieuXuat";
+                 dap = new SqlDataAdapter(sql, conn);
+                 table = new DataTable();
+                dap.Fill(table);
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    string maphieuxuat = table.Rows[i][0].ToString();
+                    string xoa = "DELETE FROM  dbo.CHI_TIET_XUAT WHERE MaPhieu = '"+ maphieuxuat + "'";
+                    comm = new SqlCommand(xoa, conn);
+                    comm.ExecuteNonQuery();
+                    xoa = "DELETE FROM dbo.PHIEU_XUAT WHERE MaSoPhieuXuat = '"+maphieuxuat+"'";
+                    comm = new SqlCommand(xoa, conn);
+                    comm.ExecuteNonQuery();
+
+                }
+
+                string xoa_nhanvien = "DELETE FROM dbo.NHAN_VIEN WHERE MaNhanVien = '" + txt_manv.Text + "'";
+                comm = new SqlCommand(xoa_nhanvien, conn);
                 comm.ExecuteNonQuery();
+                MessageBox.Show("Xóa Thành Công");
                 conn.Close();
                 this.loadData();
+                MessageBox.Show("Xóa Thành Công");
                 txt_manv.Clear();
                 txt_sdt.Clear();
                 txt_tennv.Clear();
+                
 
 
             }

@@ -67,7 +67,13 @@ namespace WindowsFormsApp3
 
         private void bt_them_Click(object sender, EventArgs e)
         {
-            conn.Open();
+            DialogResult result = new DialogResult();
+            XacNhan frm = new XacNhan();
+            result = frm.ShowDialog();
+            if (result == DialogResult.Cancel)
+                return;
+            if(conn.State == ConnectionState.Closed) 
+                conn.Open();
             if(txt_tensp.Text.Equals("") || txt_dongia.Text.Equals("") || txt_donvitinh.Text.Equals("") || cb_mh.Text.Equals("") || txt_nhomhang.Text.Equals("") || txt_masp.Text.Equals(""))
             {
                 MessageBox.Show("Thông Tin Bị Thiếu");

@@ -39,14 +39,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_HangHoa = new System.Windows.Forms.DataGridView();
-            this.MaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNhomHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaXuatKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_giaban = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,6 +60,14 @@
             this.bt_xoa = new System.Windows.Forms.Button();
             this.bt_sua = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.MaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNhomHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaXuatKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HangHoa)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.txt_.SuspendLayout();
@@ -104,78 +104,6 @@
             this.dgv_HangHoa.Size = new System.Drawing.Size(1131, 452);
             this.dgv_HangHoa.TabIndex = 1;
             this.dgv_HangHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HangHoa_CellClick);
-            // 
-            // MaHang
-            // 
-            this.MaHang.DataPropertyName = "MaHang";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHang.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaHang.HeaderText = "Mã Hàng Hóa";
-            this.MaHang.Name = "MaHang";
-            this.MaHang.ReadOnly = true;
-            // 
-            // MaNhomHang
-            // 
-            this.MaNhomHang.DataPropertyName = "MaNhomHang";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaNhomHang.DefaultCellStyle = dataGridViewCellStyle4;
-            this.MaNhomHang.HeaderText = "Mã Nhóm Hàng";
-            this.MaNhomHang.Name = "MaNhomHang";
-            this.MaNhomHang.ReadOnly = true;
-            // 
-            // TenHang
-            // 
-            this.TenHang.DataPropertyName = "TenHang";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenHang.DefaultCellStyle = dataGridViewCellStyle5;
-            this.TenHang.HeaderText = "Tên Hàng Hóa";
-            this.TenHang.Name = "TenHang";
-            this.TenHang.ReadOnly = true;
-            // 
-            // DonViTinh
-            // 
-            this.DonViTinh.DataPropertyName = "DonViTinh";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonViTinh.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DonViTinh.HeaderText = "Đơn Vị TÍnh";
-            this.DonViTinh.Name = "DonViTinh";
-            this.DonViTinh.ReadOnly = true;
-            // 
-            // MaNhaCungCap
-            // 
-            this.MaNhaCungCap.DataPropertyName = "MaNhaCungCap";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaNhaCungCap.DefaultCellStyle = dataGridViewCellStyle7;
-            this.MaNhaCungCap.HeaderText = "Mã Nhà Cung Cấp";
-            this.MaNhaCungCap.Name = "MaNhaCungCap";
-            this.MaNhaCungCap.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle8;
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonGia.DefaultCellStyle = dataGridViewCellStyle9;
-            this.DonGia.HeaderText = "Đon Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // GiaXuatKho
-            // 
-            this.GiaXuatKho.DataPropertyName = "GiaXuatKho";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GiaXuatKho.DefaultCellStyle = dataGridViewCellStyle10;
-            this.GiaXuatKho.HeaderText = "Giá Bán";
-            this.GiaXuatKho.Name = "GiaXuatKho";
-            this.GiaXuatKho.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -380,6 +308,78 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "CẬP NHẬT THÔNG TIN HÀNG HÓA";
             // 
+            // MaHang
+            // 
+            this.MaHang.DataPropertyName = "MaHang";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHang.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaHang.HeaderText = "Mã Hàng Hóa";
+            this.MaHang.Name = "MaHang";
+            this.MaHang.ReadOnly = true;
+            // 
+            // MaNhomHang
+            // 
+            this.MaNhomHang.DataPropertyName = "MaNhomHang";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaNhomHang.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MaNhomHang.HeaderText = "Mã Nhóm Hàng";
+            this.MaNhomHang.Name = "MaNhomHang";
+            this.MaNhomHang.ReadOnly = true;
+            // 
+            // TenHang
+            // 
+            this.TenHang.DataPropertyName = "TenHang";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenHang.DefaultCellStyle = dataGridViewCellStyle5;
+            this.TenHang.HeaderText = "Tên Hàng Hóa";
+            this.TenHang.Name = "TenHang";
+            this.TenHang.ReadOnly = true;
+            // 
+            // DonViTinh
+            // 
+            this.DonViTinh.DataPropertyName = "DonViTinh";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonViTinh.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DonViTinh.HeaderText = "Đơn Vị TÍnh";
+            this.DonViTinh.Name = "DonViTinh";
+            this.DonViTinh.ReadOnly = true;
+            // 
+            // MaNhaCungCap
+            // 
+            this.MaNhaCungCap.DataPropertyName = "MaNhaCungCap";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaNhaCungCap.DefaultCellStyle = dataGridViewCellStyle7;
+            this.MaNhaCungCap.HeaderText = "Mã Nhà Cung Cấp";
+            this.MaNhaCungCap.Name = "MaNhaCungCap";
+            this.MaNhaCungCap.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle8;
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonGia.DefaultCellStyle = dataGridViewCellStyle9;
+            this.DonGia.HeaderText = "Đon Giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // GiaXuatKho
+            // 
+            this.GiaXuatKho.DataPropertyName = "GiaXuatKho";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GiaXuatKho.DefaultCellStyle = dataGridViewCellStyle10;
+            this.GiaXuatKho.HeaderText = "Giá Bán";
+            this.GiaXuatKho.Name = "GiaXuatKho";
+            this.GiaXuatKho.ReadOnly = true;
+            // 
             // CapNhat_HangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +429,7 @@
         private System.Windows.Forms.Label lb2;
         private System.Windows.Forms.TextBox txt_giaban;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNhomHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHang;
@@ -437,6 +438,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaXuatKho;
-        private System.Windows.Forms.Label label4;
     }
 }

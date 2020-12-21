@@ -31,5 +31,12 @@ namespace WindowsFormsApp3
             dgv_khachhang.DataSource = table;
             conn.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BaoCao_Khachhang_TimNang.loaiKH = "Khách Hàng Thân Thiết";
+            BaoCao_Khachhang_TimNang frm = new BaoCao_Khachhang_TimNang();
+            frm.Show();
+        }
     }
 }

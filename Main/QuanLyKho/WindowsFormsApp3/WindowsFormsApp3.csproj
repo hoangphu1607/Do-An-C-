@@ -53,17 +53,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCao_BanChay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCao_BanChay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao_BanNhieuNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao_BanNhieuNhat.Designer.cs">
+      <DependentUpon>BaoCao_BanNhieuNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao_DanhThuThangNay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao_DanhThuThangNay.Designer.cs">
+      <DependentUpon>BaoCao_DanhThuThangNay.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao_HangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaoCao_HangNhap.Designer.cs">
       <DependentUpon>BaoCao_HangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao_HangNhapNhieuNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao_HangNhapNhieuNhat.Designer.cs">
+      <DependentUpon>BaoCao_HangNhapNhieuNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao_Khachhang_TimNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao_Khachhang_TimNang.Designer.cs">
+      <DependentUpon>BaoCao_Khachhang_TimNang.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaoCao_NhanVien.Designer.cs">
       <DependentUpon>BaoCao_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao_NhapHangThangNay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao_NhapHangThangNay.Designer.cs">
+      <DependentUpon>BaoCao_NhapHangThangNay.cs</DependentUpon>
     </Compile>
     <Compile Include="BaoCao_XuatHang.cs">
       <SubType>Form</SubType>
@@ -95,6 +131,18 @@
     <Compile Include="CapNhat_NhomHang.Designer.cs">
       <DependentUpon>CapNhat_NhomHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChonThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonThang.Designer.cs">
+      <DependentUpon>ChonThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChonThang_Cho_BaoCaoThangNay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonThang_Cho_BaoCaoThangNay.Designer.cs">
+      <DependentUpon>ChonThang_Cho_BaoCaoThangNay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="Cry_DanhSachNhanVien.cs">
       <AutoGen>True</AutoGen>
@@ -112,6 +160,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>cry_XuatHang.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="DanhThu_ThangNay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DanhThu_ThangNay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_KhachHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_KhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Hang_Da_Xuat_Kho.cs">
       <SubType>Form</SubType>
@@ -167,6 +227,12 @@
     <Compile Include="NhapKho.Designer.cs">
       <DependentUpon>NhapKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapNhieuNhat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NhapNhieuNhat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyKho.cs">
@@ -211,6 +277,12 @@
     <Compile Include="ThongTinHangHoa.Designer.cs">
       <DependentUpon>ThongTinHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tong_Nhap_Hang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tong_Nhap_Hang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="XacNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,11 +295,30 @@
     <Compile Include="xuatkho.Designer.cs">
       <DependentUpon>xuatkho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCao_BanChay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCao_BanChay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao_BanNhieuNhat.resx">
+      <DependentUpon>BaoCao_BanNhieuNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao_DanhThuThangNay.resx">
+      <DependentUpon>BaoCao_DanhThuThangNay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao_HangNhap.resx">
       <DependentUpon>BaoCao_HangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao_HangNhapNhieuNhat.resx">
+      <DependentUpon>BaoCao_HangNhapNhieuNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao_Khachhang_TimNang.resx">
+      <DependentUpon>BaoCao_Khachhang_TimNang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao_NhanVien.resx">
       <DependentUpon>BaoCao_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao_NhapHangThangNay.resx">
+      <DependentUpon>BaoCao_NhapHangThangNay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao_XuatHang.resx">
       <DependentUpon>BaoCao_XuatHang.cs</DependentUpon>
@@ -244,6 +335,12 @@
     <EmbeddedResource Include="CapNhat_NhomHang.resx">
       <DependentUpon>CapNhat_NhomHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChonThang.resx">
+      <DependentUpon>ChonThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChonThang_Cho_BaoCaoThangNay.resx">
+      <DependentUpon>ChonThang_Cho_BaoCaoThangNay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cry_DanhSachNhanVien.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Cry_DanhSachNhanVien.cs</LastGenOutput>
@@ -255,6 +352,14 @@
     <EmbeddedResource Include="cry_XuatHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cry_XuatHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhThu_ThangNay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DanhThu_ThangNay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DS_KhachHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DS_KhachHang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Hang_Da_Xuat_Kho.resx">
       <DependentUpon>Hang_Da_Xuat_Kho.cs</DependentUpon>
@@ -283,6 +388,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhapKho.resx">
       <DependentUpon>NhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapNhieuNhat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NhapNhieuNhat.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -315,6 +424,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinHangHoa.resx">
       <DependentUpon>ThongTinHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tong_Nhap_Hang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Tong_Nhap_Hang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="XacNhan.resx">
       <DependentUpon>XacNhan.cs</DependentUpon>

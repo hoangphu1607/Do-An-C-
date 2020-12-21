@@ -39,6 +39,7 @@
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_khachhang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,12 +124,24 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "DANH SÁCH KHÁCH HÀNG THÂN THIẾT";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(707, 766);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(182, 46);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "XUẤT BÁO CÁO";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ds_khachhangthanthiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources._1228c58b032f61bb61a3d2f4e8d6d1fb;
             this.ClientSize = new System.Drawing.Size(1676, 929);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgv_khachhang);
             this.Name = "ds_khachhangthanthiet";
@@ -149,5 +162,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhach;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.Button button1;
     }
 }

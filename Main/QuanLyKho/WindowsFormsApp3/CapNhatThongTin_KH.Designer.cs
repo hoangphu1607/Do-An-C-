@@ -47,7 +47,6 @@
             this.txt_ten = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_khachhang)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -291,24 +290,13 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(602, 343);
+            this.button1.Location = new System.Drawing.Point(812, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 33);
             this.button1.TabIndex = 5;
             this.button1.Text = "Sửa";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(966, 343);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 33);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -329,7 +317,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1677, 928);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_khachhang);
@@ -360,7 +347,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_makh;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhach;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;

@@ -64,7 +64,12 @@ namespace WindowsFormsApp3
 
         private void bt_sua_Click(object sender, EventArgs e)
         {
-            if(conn.State == ConnectionState.Closed)
+            DialogResult result = new DialogResult();
+            XacNhan frm = new XacNhan();
+            result = frm.ShowDialog();
+            if (result == DialogResult.Cancel)
+                return;
+            if (conn.State == ConnectionState.Closed)
                 conn.Open();
             double dongia, giaxuatkho;
             dongia = Convert.ToDouble(txt_dongia.Text);
@@ -77,6 +82,7 @@ namespace WindowsFormsApp3
             sql = "UPDATE HANG_HOA set TenHang = N'"+txt_tensp.Text+"', DonGia = '"+txt_dongia.Text+"', DonViTinh = N'"+txt_donvitinh.Text+"', SoLuong = '"+txt_soLuong.Text+"', GiaXuatKho = '"+txt_giaban.Text+"' where mahang = '"+txt_masp.Text+"'";
             comm = new SqlCommand(sql,conn);
             comm.ExecuteNonQuery();
+            MessageBox.Show("Cập Nhật Thông Tin Thành Công");
             this.loadData();
             conn.Close();
         }

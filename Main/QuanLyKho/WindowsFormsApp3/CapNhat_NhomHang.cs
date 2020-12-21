@@ -50,13 +50,28 @@ namespace WindowsFormsApp3
 
         private void bt_sua_Click(object sender, EventArgs e)
         {
-            conn.Open();
-
-            sql = "UPDATE NHOM_HANG SET TenNhom = N'" + txt_tennhom.Text + "' WHERE MaNhom = '" + txt_manhom.Text + "'";
-            comm = new SqlCommand(sql, conn);
-            comm.ExecuteNonQuery();
-            this.loadData();
-            conn.Close();
+            if (txt_tennhom.Text.Equals(""))
+            {
+                MessageBox.Show("Tên Nhóm Không Được Bỏ Trống");
+                return;
+            }
+            try
+            {
+                conn.Open();
+                sql = "UPDATE NHOM_HANG SET TenNhom = N'" + txt_tennhom.Text + "' WHERE MaNhom = '" + txt_manhom.Text + "'";
+                comm = new SqlCommand(sql, conn);
+                comm.ExecuteNonQuery();
+                MessageBox.Show("Thay Đổi Dữ Liệu Thành Công");
+                this.loadData();
+                
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thay Đổi Thất Bại");
+                //throw;
+            }
+            
         }
 
         public void loadData()

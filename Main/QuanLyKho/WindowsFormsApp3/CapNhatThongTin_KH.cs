@@ -83,7 +83,7 @@ namespace WindowsFormsApp3
                 sql = "UPDATE KHACH_HANG SET SDT = '" + txt_sdt.Text + "',TenKhach = N'" + txt_ten.Text+"', Diachi = N'"+ cbb_diachi.SelectedItem.ToString() + "', LoaiKH = N'" + cbb_loaikh.SelectedItem.ToString() + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
-
+                MessageBox.Show("Cập Nhật Thành Công");
                 //sql = "UPDATE KHACH_HANG SET TenKhach = N'" + txt_ten.Text + "' WHERE MaKhachHang = '" + txt_makh.Text + "';";
                 //comm = new SqlCommand(sql, conn);
                 //comm.ExecuteNonQuery();

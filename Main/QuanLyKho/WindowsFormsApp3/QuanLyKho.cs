@@ -195,5 +195,33 @@ namespace WindowsFormsApp3
             frm.ShowDialog();
 
         }
+
+        private void hàngBánChạyNhấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChonThang.trangthai = 1;
+            ChonThang frm = new ChonThang();
+            frm.ShowDialog();
+
+        }
+
+        private void danhThuThángNàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChonThang_Cho_BaoCaoThangNay frm = new ChonThang_Cho_BaoCaoThangNay();
+            frm.ShowDialog();
+        }
+
+        private void hàngHóaNhậpNhiềuNhâtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChonThang.trangthai = 3;
+            ChonThang frm = new ChonThang();
+            frm.ShowDialog();
+        }
+
+        private void hàngHóaNhậpTrongThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChonThang.trangthai = 4;
+            ChonThang frm = new ChonThang();
+            frm.ShowDialog();
+        }
     }
 }
